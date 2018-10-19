@@ -12,8 +12,8 @@
 <br/>
 
 <div align="center">
-<p><b><font size="9">基于C语言的关系型数据库实现</font></p></p>
-<p><font size="2">A Relational Database System Implementation Based on C Language</font></p>
+<img height="40px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/2.jpg">
+<p><font size=2>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
 
