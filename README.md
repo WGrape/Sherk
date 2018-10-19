@@ -12,8 +12,8 @@
 <br/>
 
 <div align="center">
-<p><b><font size=7>基于C语言的关系型数据库实现</font></p></p>
-<p><font size=3>A Relational Database System Implementation Based on C Language</font></p>
+<p><b><font size=9>基于C语言的关系型数据库实现</font></p></p>
+<p><font size=2>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
 
