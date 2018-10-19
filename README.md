@@ -3,10 +3,11 @@
 
 <img width="220px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
 
-<h1>Sherk</h1>
-<h4>A Relational Database System Implementation Based on C Language</h4>
-
 </div>
+
+### Sherk
+> A Relational Database System Implementation Based on C Language
+
 
 ## 目录
 
