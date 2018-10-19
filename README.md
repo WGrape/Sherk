@@ -12,8 +12,8 @@
 <br/>
 
 <div align="center">
-<p>基于C语言的关系型数据库实现</p>
-<p>A Relational Database System Implementation Based on C Language</p>
+<p><b><font size=5>基于C语言的关系型数据库实现</font></p></p>
+<p><font size=3>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
 
@@ -26,30 +26,41 @@
 
 
 
-### 前言
+### (1) 前言
 - [项目介绍](https://note.youdao.com/)
 - [图解数据库](https://note.youdao.com/)
 - [数据库的4个基本概念](https://note.youdao.com/)
 
-### 数据库系统的理解
+### (2) 数据库系统的理解
 
 - [数据模型的分类](https://note.youdao.com/)
 - [数据库系统分类](https://note.youdao.com/)
 - [数据库系统的特点](https://note.youdao.com/)
 
-### 非关系型数据库系统
+### (3) 非关系型数据库系统
 
-- [简要](https://note.youdao.com/)
+- [概述](https://note.youdao.com/)
+- [非关系型数据库的特点](https://note.youdao.com/)
+- [常见的非关系型数据库](https://note.youdao.com/)
 
-### 关系型数据库系统的理解
+### (4) 关系型数据库系统的理解
 
 - [关系数据结构](https://note.youdao.com/)
 - [关系的完整性](https://note.youdao.com/)
-- [关系的代数运算](https://note.youdao.com/)
+
+- #### 关系的代数运算
+    - [集合运算](https://note.youdao.com/)
+
+    - ##### 关系运算
+        - [选择](https://note.youdao.com/)
+        - [投影](https://note.youdao.com/)
+        - [连接](https://note.youdao.com/)
+        - [除](https://note.youdao.com/)
+
 - [关系模式的数据理论](https://note.youdao.com/)
 
 
-### 关系型数据库系统的基础架构
+### (5) 关系型数据库系统的基础架构
 
 - #### 数据的存储
 
@@ -107,6 +118,16 @@
         - [登记日志文件](https://note.youdao.com/)
         - [检查点恢复技术](https://note.youdao.com/)
 
-### 完结
+
+### (6) 关系型数据库系统的实现
+
+- #### 数据的存储
+
+    - [概述](https://note.youdao.com/)
+    - [磁盘存储](https://note.youdao.com/)
+
+
+
+### (7) 完结
 - [总结](https://note.youdao.com/)
 - [思考](https://note.youdao.com/)
