@@ -5,7 +5,7 @@
 
 <br/>
 
-<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/4.png">
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/1.png">
 
 </div>
 
