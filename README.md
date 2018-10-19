@@ -3,8 +3,7 @@
 
 <img width="220px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
 
-<h3>Sherk</h3>
-</br>
+<h1>Sherk</h3>
 <h4>A Relational Database System Implementation Based on C Language</h4>
 
 </div>
