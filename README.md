@@ -19,8 +19,8 @@
 
 <br>
 
-> 参考及文献文献有： <br>
-> 1. [《数据库系统概论》 王珊](https://www.zhihu.com/question/38870156)
+> 参考资料及文献有： <br>
+> 1. 《数据库系统概论》 王珊
 > 2. [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156)
 >
 >
@@ -67,25 +67,13 @@
 
 ### (5) 关系型数据库系统的理论架构
 
-- #### 查询处理
+- #### 完整性
 
     - [概述](https://note.youdao.com/)
-
-    - 查询步骤
-
-        - [查询分析](https://note.youdao.com/)
-        - [查询检查](https://note.youdao.com/)
-        - [查询优化](https://note.youdao.com/)
-        - [查询执行](https://note.youdao.com/)
-
-    - [理解查询计划](https://note.youdao.com/)
-
-    - 理解查询优化
-
-        - [查询优化概述](https://note.youdao.com/)
-        - [实例讲解](https://note.youdao.com/)
-        - [优化方法](https://note.youdao.com/)
-
+    - [实体完整性](https://note.youdao.com/)
+    - [参照完整性](https://note.youdao.com/)
+    - [自定义完整性](https://note.youdao.com/)
+    - [断言](https://note.youdao.com/)
 
 - #### 数据存储
 
@@ -105,30 +93,33 @@
         - [B+ 树索引](https://note.youdao.com/)
         - [Hash 索引](https://note.youdao.com/)
 
-- #### 数据库系统的安全性
+- #### 查询处理
 
     - [概述](https://note.youdao.com/)
-    - [视图](https://note.youdao.com/)
-    - [审计](https://note.youdao.com/)
-    - [安全控制](https://note.youdao.com/)
-    - [数据加密](https://note.youdao.com/)
-    - [其他](https://note.youdao.com/)
 
-- #### 数据库系统的完整性
+    - 查询步骤
 
-    - [概述](https://note.youdao.com/)
-    - [实体完整性](https://note.youdao.com/)
-    - [参照完整性](https://note.youdao.com/)
-    - [自定义完整性](https://note.youdao.com/)
-    - [断言](https://note.youdao.com/)
+        - [查询分析](https://note.youdao.com/)
+        - [查询检查](https://note.youdao.com/)
+        - [查询优化](https://note.youdao.com/)
+        - [查询执行](https://note.youdao.com/)
 
+    - [理解查询计划](https://note.youdao.com/)
 
-- #### 数据库系统的事务处理
+    - 理解查询优化
+
+        - [查询优化概述](https://note.youdao.com/)
+        - [实例讲解](https://note.youdao.com/)
+        - [优化方法](https://note.youdao.com/)
+
+- #### 日志系统
+
+- #### 事务处理
 
     - ##### 事务
 
         - [概述](https://note.youdao.com/)
-
+        - [图解事务](https://note.youdao.com/)
         - 事务的 ACID 特性
 
             - [原子性 ( Atomicity )](https://note.youdao.com/)
@@ -136,9 +127,7 @@
             - [隔离性 ( Isolation )](https://note.youdao.com/)
             - [持久性 ( Durability )](https://note.youdao.com/)
 
-        - [封锁的粒度](https://note.youdao.com/)
-        - [活锁和死锁](https://note.youdao.com/)
-        - [多版本并发控制](https://note.youdao.com/)
+        - [实例讲解](https://note.youdao.com/)
 
     - ##### 并发控制
 
@@ -155,6 +144,14 @@
         - [登记日志文件](https://note.youdao.com/)
         - [检查点恢复技术](https://note.youdao.com/)
 
+- #### 安全性
+
+    - [概述](https://note.youdao.com/)
+    - [视图](https://note.youdao.com/)
+    - [审计](https://note.youdao.com/)
+    - [安全控制](https://note.youdao.com/)
+    - [数据加密](https://note.youdao.com/)
+    - [其他](https://note.youdao.com/)
 
 ### (6) 关系型数据库系统的代码实现
 
