@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img width="220px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
+<img width="220px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/sherk.jpeg">
 
 <br/>
 
