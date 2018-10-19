@@ -1,4 +1,4 @@
-<img width="270px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
+<img width="270px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg" style="margin: 0 auto;display: block;">
 Sherk
 A Relational Database System Implementation Based on C Language
 
