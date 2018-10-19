@@ -19,8 +19,9 @@
 
 <br>
 
-> 参考文献有： <br>
-> 1. 《数据库系统概论》 王珊
+> 参考及文献文献有： <br>
+> 1. [《数据库系统概论》 王珊](https://www.zhihu.com/question/38870156)
+> 2. [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156)
 >
 >
 
@@ -90,6 +91,8 @@
 
     - [概述](https://note.youdao.com/)
     - [磁盘存储](https://note.youdao.com/)
+    - 内存缓存
+        - [缓存池]()
 
 - #### 数据索引
 
@@ -125,7 +128,14 @@
     - ##### 事务
 
         - [概述](https://note.youdao.com/)
-        - [事务的 ACID 特性](https://note.youdao.com/)
+
+        - 事务的 ACID 特性
+
+            - [原子性 ( Atomicity )](https://note.youdao.com/)
+            - [一致性 ( Consistency )](https://note.youdao.com/)
+            - [隔离性 ( Isolation )](https://note.youdao.com/)
+            - [持久性 ( Durability )](https://note.youdao.com/)
+
         - [封锁的粒度](https://note.youdao.com/)
         - [活锁和死锁](https://note.youdao.com/)
         - [多版本并发控制](https://note.youdao.com/)
