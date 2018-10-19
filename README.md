@@ -5,12 +5,13 @@
 
 <br/>
 
-<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/1.png">
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/1.jpg">
 
 </div>
 
-<div align="center">基于C语言的关系型数据库实现
-<sup>A Relational Database System Implementation Based on C Language</sup>
+<div align="center">
+<p>基于C语言的关系型数据库实现</p>
+<p>A Relational Database System Implementation Based on C Language</p>
 </div>
 
 
