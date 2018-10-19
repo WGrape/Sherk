@@ -33,5 +33,7 @@ add_executable(Sherk
         src/client/client.c
 
 
+        src/server/integrity/assertion/assertion.c
+
 
 )
