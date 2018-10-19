@@ -1,13 +1,15 @@
 
-<div align="center">
+<center>
 
 <img width="220px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
 
-</div>
+</center>
 
-### Sherk
-基于C语言的关系型数据库实现
+
+### <center>Sherk</center>
+<center>基于C语言的关系型数据库实现
 <sup>A Relational Database System Implementation Based on C Language</sup>
+</center>
 
 <br>
 
