@@ -4,48 +4,25 @@
 
 <img width="270px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/sherk.jpeg">
 
-<p style="color:#000;font-size:22px;font-family:'黑体'">目录</p>
+## 目录
 
-<p style="padding-left:20px;color:#000;font-size:20px;font-family:'黑体'"> <li>前言</li>
-</p>
+- ### 前言
 
+- ### 数据库系统概述
 
-
-<div style="padding-left:20px;color:#000;font-size:20px;font-family:'黑体'"> <li>数据库系统概述</li>
-<ul>
-
-<p style="padding:10px 0 0 20px;color:#555;font-size:18px;"># 4个基本概念</p>
-
-<p style="padding:0 0 0 20px;color:#555;font-size:18px;">#
-数据模型的分类</p>
-
-<p style="padding:0 0 0 20px;color:#555;font-size:18px;">#
-数据库系统的特点</p>
-
-</ul>
-</div>
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 4个基本概念
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 数据模型的分类
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 数据库系统的特点
 
 
-<div style="padding-left:20px;color:#000;font-size:20px;font-family:'黑体'"> <li>关系型数据库概述</li>
-<ul>
+- ### 关系型数据库概述
 
-<p style="padding:10px 0 0 20px;color:#555;font-size:18px;"># 关系数据结构</p>
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 关系数据结构
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 关系的完整性
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 关系代数
 
-<p style="padding:0 0 0 20px;color:#555;font-size:18px;"># 关系的完整性</p>
 
-<p style="padding:0 0 0 20px;color:#555;font-size:18px;">#
-关系代数</p>
+- ### 关系型数据库的实现
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 基础架构
 
-</ul>
-</div>
-
-<div style="padding-left:20px;color:#000;font-size:20px;font-family:'黑体'"> <li>关系型数据库的实现</li>
-<ul>
-
-<p style="padding:10px 0 0 20px;color:#555;font-size:18px;"># 基础架构</p>
-
-</ul>
-</div>
-
-<p style="padding-left:20px;color:#000;font-size:20px;font-family:'黑体'"> <li>总结</li>
-</p>
+- ### 总结
