@@ -12,19 +12,23 @@
 <br/>
 
 <div align="center">
-<p><b><font size=5>基于C语言的关系型数据库实现</font></p></p>
+<p><b><font size=7>基于C语言的关系型数据库实现</font></p></p>
 <p><font size=3>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
 
 <br>
 
-> 参考文献如下 <br>
+> 参考文献有： <br>
 > 1. 《数据库系统概论》 王珊
 >
 >
 
+<br>
 
+> 注：第 (6) 章才开始代码的实现，你可以选择[直接看代码](https://note.youdao.com/)
+
+<br>
 
 ### (1) 前言
 - [项目介绍](https://note.youdao.com/)
@@ -60,7 +64,7 @@
 - [关系模式的数据理论](https://note.youdao.com/)
 
 
-### (5) 关系型数据库系统的基础架构
+### (5) 关系型数据库系统的理论架构
 
 - #### 数据的存储
 
@@ -119,7 +123,7 @@
         - [检查点恢复技术](https://note.youdao.com/)
 
 
-### (6) 关系型数据库系统的实现
+### (6) 关系型数据库系统的代码实现
 
 - #### 数据的存储
 
