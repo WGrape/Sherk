@@ -52,10 +52,10 @@
 - [关系数据结构](https://note.youdao.com/)
 - [关系的完整性](https://note.youdao.com/)
 
-- #### 关系的代数运算
+- 关系的代数运算
     - [集合运算](https://note.youdao.com/)
 
-    - ##### 关系运算
+    - 关系运算
         - [选择](https://note.youdao.com/)
         - [投影](https://note.youdao.com/)
         - [连接](https://note.youdao.com/)
@@ -66,19 +66,37 @@
 
 ### (5) 关系型数据库系统的理论架构
 
+- #### 查询处理
+
+    - [概述](https://note.youdao.com/)
+
+    - 查询步骤
+
+        - [查询分析](https://note.youdao.com/)
+        - [查询检查](https://note.youdao.com/)
+        - [查询优化](https://note.youdao.com/)
+        - [查询执行](https://note.youdao.com/)
+
+    - [理解查询计划](https://note.youdao.com/)
+
+    - 理解查询优化
+
+        - [查询优化概述](https://note.youdao.com/)
+        - [实例讲解](https://note.youdao.com/)
+        - [优化方法](https://note.youdao.com/)
+
+
 - #### 数据存储
 
     - [概述](https://note.youdao.com/)
     - [磁盘存储](https://note.youdao.com/)
-
-
 
 - #### 数据索引
 
     - [概述](https://note.youdao.com/)
     - [索引的分类](https://note.youdao.com/)
 
-    - ##### 索引的实现原理
+    - 索引的实现原理
 
         - [B 树索引](https://note.youdao.com/)
         - [B+ 树索引](https://note.youdao.com/)
@@ -130,10 +148,13 @@
 
 ### (6) 关系型数据库系统的代码实现
 
-- #### 数据的存储
+- #### 介绍
 
-    - [概述](https://note.youdao.com/)
-    - [磁盘存储](https://note.youdao.com/)
+    - ##### [目录结构](https://note.youdao.com/)
+
+- #### 客户端
+
+- #### 服务端
 
 
 
