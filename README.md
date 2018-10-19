@@ -12,8 +12,8 @@
 <br/>
 
 <div align="center">
-<p><b><font size=9>基于C语言的关系型数据库实现</font></p></p>
-<p><font size=2>A Relational Database System Implementation Based on C Language</font></p>
+<p><b><font size="9">基于C语言的关系型数据库实现</font></p></p>
+<p><font size="2">A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
 
@@ -66,18 +66,23 @@
 
 ### (5) 关系型数据库系统的理论架构
 
-- #### 数据的存储
+- #### 数据存储
 
     - [概述](https://note.youdao.com/)
     - [磁盘存储](https://note.youdao.com/)
 
 
 
-- #### 数据的索引
+- #### 数据索引
 
     - [概述](https://note.youdao.com/)
-    - [索引的存储](https://note.youdao.com/)
+    - [索引的分类](https://note.youdao.com/)
 
+    - ##### 索引的实现原理
+
+        - [B 树索引](https://note.youdao.com/)
+        - [B+ 树索引](https://note.youdao.com/)
+        - [Hash 索引](https://note.youdao.com/)
 
 - #### 数据库系统的安全性
 
