@@ -5,14 +5,14 @@
 - [《第三章 - 完结讨论》](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section3.index.md)
 <br><br>
 
-## 1. 介绍
+### 1. 介绍
 
-- ### 1.1 目录结构
+- #### 1.1 目录结构
 
     - [1.1.1 总览](#https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section2.content.md#article)
 
-## 2. 客户端
+### 2. 客户端
 
-## 3. 服务端
+### 3. 服务端
 
 <br/>
