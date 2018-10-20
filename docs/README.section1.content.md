@@ -1,8 +1,8 @@
 # 《 第一章 - 理论学习 》正文
 
-- [↻ 回到目录](https://github.com/Lvsi-China/Sherk/raw/master/docs/README.section1.index.md) &nbsp; [☝ 回到首页](https://github.com/Lvsi-China/Sherk/raw/master/README.md)
-- [《第二章 - 理论学习》](https://github.com/Lvsi-China/Sherk/raw/master/docs/README.section2.index.md)
-- [《第三章 - 完结讨论》](https://github.com/Lvsi-China/Sherk/raw/master/docs/README.section3.index.md)
+- [↻ 回到目录](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.index.md) &nbsp; [☝ 回到首页](https://github.com/Lvsi-China/Sherk)
+- [《第二章 - 理论学习》](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section2.index.md)
+- [《第三章 - 完结讨论》](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section3.index.md)
 <br/><br/>
 
 
