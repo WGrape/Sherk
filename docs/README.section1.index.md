@@ -146,14 +146,14 @@
 
 - #### 5.3 数据索引
 
-    - [5.3.1 概述](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.2.3.1)
-    - [5.3.2 索引的分类](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.2.3.1)
+    - [5.3.1 概述](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.3.1)
+    - [5.3.2 索引的分类](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.3.2)
 
     - 5.3.3 索引的实现原理
 
-        - [B 树索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.2.3.1)
-        - [B+ 树索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.2.3.1)
-        - [Hash 索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.2.3.1)
+        - [B 树索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.3.3.1)
+        - [B+ 树索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.3.3.2)
+        - [Hash 索引](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.3.3.3)
 
 - #### 5.4 查询处理
 
@@ -211,8 +211,8 @@
     - [5.7.1 概述](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.1)
     - [5.7.2 视图](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.2)
     - [5.7.3 审计](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.3)
-    - 5.7.4 安全控制
 
+    - 5.7.4 安全控制
         - [用户身份鉴别](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.4.1)
         - [存取控制](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.4.2)
         - [授权：授予（GRANT）与收回（REVOKE）](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section1.content.md#article-5.7.4.3)
