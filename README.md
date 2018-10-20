@@ -35,9 +35,12 @@
 >
 > ### 2. 数据库系统的理解
 >
-> - [2.1 数据模型的分类](https://note.youdao.com/)
-> - [2.2 数据库系统分类](https://note.youdao.com/)
-> - [2.3 数据库系统的特点](https://note.youdao.com/)
+> - [2.1 数据模型概述](https://note.youdao.com/)
+> - 2.2 数据模型的分类
+>     - [2.2.1 概念模型](#article-2.2.1)
+>     - [2.2.2 物理模型](#article-2.2.2)
+> - [2.3 数据库系统的分类](https://note.youdao.com/)
+> - [2.4 数据库系统的特点](https://note.youdao.com/)
 >
 > ### 3. 非关系型数据库系统
 >
@@ -172,20 +175,58 @@
 
 ## 1. 前言
 
-- 1.1 <span id="article-1.1">图解数据库</span>
+- <span id="article-1.1">1.1 图解数据库</span>
 
     <img width="350px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter-1/1.jpg">
 
-- 1.2 <span id="article-1.2">数据库的发展历史</span>
+- <span id="article-1.2">1.2 数据库的发展历史</span>
 
     <img width="350px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter-1/2.jpg">
 
 - 1.3 数据库的4个基本概念
 
-    - 1.3.1 <span id="article-1.3.1">数据</span>
-    - 1.3.2 <span id="article-1.3.2">数据库</span>
-    - 1.3.3 <span id="article-1.3.3">数据库管理系统</span>
-    - 1.3.4 <span id="article-1.3.4">数据库系统</span>
+    - <span id="article-1.3.1">1.3.1 数据</span><br/>
+    数据是数据库中存储的基本对象。
+
+    - <span id="article-1.3.2">1.3.2 数据库</span><br/>
+    数据库即是存放数据的仓库。
+
+    - <span id="article-1.3.3">1.3.3 数据库管理系统</span><br/>
+    数据库管理系统是位于用户与操作系统之间的一层数据管理软件
+
+    - <span id="article-1.3.4">1.3.4 数据库系统</span><br/>
+    数据库系统是由数据库、数据库管理系统、应用程序和数据库管理员组成的存储、管理、处理和维护数据的系统。
+
+
+
+## 2. 数据库系统的理解
+
+- <span id="article-1.1">2.1 数据模型概述</span><br/>
+现有的数据库系统均基于某种数据模型的，数据模型是数据库系统的核心和基础。数据模型是一种模型，是对现实世界数据特征的抽象。也就是说数据模型是用来描述数据，组织数据和对数据进行操作的。
+
+
+- 2.2 数据模型的分类
+    - <span id="article-2.2.1">2.2.1 概念模型</span>
+    - <span id="article-2.2.2">2.2.2 物理模型</span>
+
+
+- <span id="article-1.2">2.3 数据库系统分类</span>
+
+
+
+- 2.4 数据库系统的特点
+
+    - <span id="article-1.3.1">2.4.1 数据</span><br/>
+    数据是数据库中存储的基本对象。
+
+    - <span id="article-1.3.2">2.4.2 数据库</span><br/>
+    数据库即是存放数据的仓库。
+
+    - <span id="article-1.3.3">2.4.3 数据库管理系统</span><br/>
+    数据库管理系统是位于用户与操作系统之间的一层数据管理软件
+
+    - <span id="article-1.3.4">2.4.4 数据库系统</span><br/>
+    数据库系统是由数据库、数据库管理系统、应用程序和数据库管理员组成的存储、管理、处理和维护数据的系统。
 
 
 
