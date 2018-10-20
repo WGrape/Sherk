@@ -168,15 +168,18 @@
 > - 7.3 附录
 >     - 7.3.1 [参考资料及文献](#article-7.3.1)
 
+<br/>
+
 ## 1. 前言
 
 - 1.1 <span id="article-1.1">图解数据库</span>
 
-<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/1.jpg">
-<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/2.jpg">
-<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/3.jpg">
+    <img width="350px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter-1/1.jpg">
 
 - 1.2 <span id="article-1.2">数据库的发展历史</span>
+
+    <img width="350px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter-1/2.jpg">
+
 - 1.3 数据库的4个基本概念
 
     - 1.3.1 <span id="article-1.3.1">数据</span>
