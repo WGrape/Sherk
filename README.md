@@ -25,9 +25,13 @@
 <br>
 
 > ### 1. 前言
-> - [1.1 项目介绍](https://note.youdao.com/)
-> - [1.2 图解数据库](https://note.youdao.com/)
-> - [1.3 数据库的4个基本概念](https://note.youdao.com/)
+> - [1.1 图解数据库](#article-1.1)
+> - [1.2 数据库的发展历史](#article-1.2)
+> - 1.3 数据库的4个基本概念
+>     - [1.3.1 数据](#article-1.3.1)
+>     - [1.3.2 数据库](#article-1.3.2)
+>     - [1.3.3 数据库管理系统](#article-1.3.3)
+>     - [1.3.4 数据库系统](#article-1.3.4)
 >
 > ### 2. 数据库系统的理解
 >
@@ -148,7 +152,7 @@
 >
 > ### 6. 关系型数据库系统的代码实现
 >
-> - ##### 6.1 介绍
+> - #### 6.1 介绍
 >
 >     - [6.1.1 目录结构](https://note.youdao.com/)
 >
@@ -164,17 +168,34 @@
 > - 7.3 附录
 >     - 7.3.1 [参考资料及文献](#article-7.3.1)
 
+## 1. 前言
 
-### 7. 完结
+- 1.1 <span id="article-1.1">图解数据库</span>
 
-- 7.1 总结 <br/><br/>
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/1.jpg">
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/2.jpg">
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter/3.jpg">
+
+- 1.2 <span id="article-1.2">数据库的发展历史</span>
+- 1.3 数据库的4个基本概念
+
+    - 1.3.1 <span id="article-1.3.1">数据</span>
+    - 1.3.2 <span id="article-1.3.2">数据库</span>
+    - 1.3.3 <span id="article-1.3.3">数据库管理系统</span>
+    - 1.3.4 <span id="article-1.3.4">数据库系统</span>
+
+
+
+## 7. 完结
+
+- ### 7.1 总结
 在信息化社会，充分有效地管理和利用各类信息资源，是进行科学研究和决策管理的前提条件。数据库技术是管理信息系统、办公自动化系统、决策支持系统等各类信息系统的核心部分，是进行科学研究和决策管理的重要技术手段。
 
-- 7.2 思考 <br/><br/>
+- ### 7.2 思考
 随着信息管理内容的不断扩展，出现了丰富多样的数据模型（层次模型，网状模型，关系模型，面向对象模型，半结构化模型等），新技术也层出不穷（数据流，Web数据管理，数据挖掘等）。每隔几年，国际上一些资深的数据库专家就会聚集一堂，探讨数据库研究现状，存在的问题和未来需要关注的新技术焦点。
 
-- 7.3 附录 <br/>
-    - 7.3.1 <span id="article-7.3.1">参考资料及文献</span><br/>
+- ### 7.3 附录
+    - 7.3.1 <span id="article-7.3.1">参考资料及文献</span>
     > 1.《数据库系统概论》 王珊 <br/>
     > 2.[如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156)
 
