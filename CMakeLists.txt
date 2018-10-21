@@ -5,6 +5,4 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(Sherk
 
-        launcher/Client.launcher.c
-
-        )
+        Sherk.c)
