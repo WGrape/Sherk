@@ -1,23 +1,16 @@
 typedef struct Server{
 
-    // 启动
-    static int (*startup)();
-
-    // 启动
-    static int (*shutdown)();
-
 }Server;
 
 
-static int startup(){
+int serverStartup(Server server){
 
     return 0;
 }
 
 
-static int shutdown(){
+int serverShutdown(Server server){
 
     return 0;
 }
 
-Server server = {startup, shutdown};

@@ -13,4 +13,4 @@ add_executable(Sherk
         src/include/object/Panel.class.h
         src/include/object/Server.class.h
 
-        Sherk.c )
+        Sherk.c src/include/define/errorcode.h)

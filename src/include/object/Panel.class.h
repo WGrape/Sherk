@@ -3,15 +3,11 @@
 // 控制面板
 typedef struct Panel {
 
-    // 打印logo
-    static void (*printLogo)();
-
-    static int (*exit)();
 
 } Panel;
 
 
-static void printLogo() {
+static void panelPrintLogo() {
 
     printf("                                                     \n"
            "                                                     \n"
@@ -31,12 +27,9 @@ static void printLogo() {
            "                                                     ");
 }
 
+void panelStartup(Panel panel) {
 
-static int exit() {
-
-    printf("");
-    char ch = getchar();
-    return (ch == 'y' || ch == 'Y') ? 1 : 0;
+    panelPrintLogo();
 }
 
-Panel panel = {printLogo, exit};
+

@@ -22,7 +22,7 @@
 
 <br>
 
-## 摘要（Synopsis）
+## ✎ 摘要（Synopsis）
 Sherk是基于C语言实现的关系型数据库，实现了关系型数据库的基本功能
 
 
@@ -30,17 +30,22 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 <br>
 
-## 教程（Tutorial）
+## ➴ 教程（Tutorial）
 
-- [第一章 - Sherk 详细介绍]()
-- [第二章 - Sherk 手册及常见问题]()
-- [第三章 - 关系型数据库的基础理论]()
-- [第四章 - 关系型数据库系统的代码实现（Sherk 源代码详解）]()
-- [第五章 - 思考和总结]()
+- [第一章 ⇨ Sherk 使用手册](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter1.md)
+
+- [第二章 ⇨ 关系型数据库系统的基础理论](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter2.md)
+
+- [第三章 ⇨ 关系型数据库系统的代码实现（Sherk 源代码详解）](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter3.md)
+
+- [第四章 ⇨ 思考和总结](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter4.md)
+
+- [附录](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.appendix.md)
+
 
 <br/>
 
-## <span id="article-usage">使用（Usage）</span>
+## <span id="article-usage">♗ 使用（Usage）</span>
     1. 下载项目 ( Download )
 
     2. 如果你了解如何使用不同平台下的编译命令，那你使用编译命令编译 Sherk.c 源文件即可。( Compile )
@@ -50,5 +55,12 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 <br>
 
 
-## 用途（Introduction）
+## ♘ 用途（Introduction）
 本项目致力于对数据库有兴趣的爱好者共同学习和研究
+
+<br>
+
+## ✍ 参考（Reference ）
+> 1. [postgresql官网](https://www.postgresql.org/)<br/>
+> 2. [数据库系统概论 - 王珊]() <br/>
+> 3. [如何自己实现一个关系型数据库？]() <br/>

@@ -1,25 +1,17 @@
 typedef struct Client {
 
-    // 启动
-    static int (*startup)();
 
-    // 启动
-    static int (*shutdown)();
 
 } Client;
 
-static int startup() {
+int clientStartup(Client client) {
 
     return 0;
 }
 
 
-static int shutdown() {
+int clientShutdown(Client client) {
 
     return 0;
 }
-
-Client client = {startup, shutdown};
-
-
 
