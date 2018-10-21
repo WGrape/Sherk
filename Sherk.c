@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 // 主程序
-int main(){
-
-    printf("Server");
+int main() {
 
     return 0;
 }
