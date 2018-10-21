@@ -14,7 +14,7 @@
 
 - 1.1 目录结构
 
-    - [1.1.1 总览](#https://github.com/Lvsi-China/Sherk/blob/master/docs/README.section2.content.md#article)
+    - [1.1.1 总览](#article-1.1.1)
 
 ## 2. 客户端
 
@@ -34,7 +34,7 @@
 
 - ### 1.1 目录结构
 
-    - #### 1.1.1 总览
+    - #### <span id="article-1.1.1">1.1.1 总览</span>
 
 ## 2. 客户端
 
