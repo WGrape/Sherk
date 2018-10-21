@@ -6,7 +6,7 @@
 - [第四章 ⇨ 思考和总结](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter4.md)
 - [附录](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.appendix.md)
 
-<br/><br>
+<br/>
 
 ## 索引
 

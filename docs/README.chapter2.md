@@ -6,10 +6,10 @@
 - [第四章 ⇨ 思考和总结](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter4.md)
 - [附录](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.appendix.md)
 
-<br/><br>
+<br/>
 
 
-# 索引
+# <span id="article-index">索引</span>
 
 ## 1. 前言
 - [1.1 图解数据库](#article-1.1)
@@ -229,7 +229,7 @@
 <br/>
 
 
-↑ 索引结束 &nbsp; | &nbsp;[♙回到索引](#)  &nbsp;|&nbsp; 正文开始 ↓
+↑ 索引结束 &nbsp; | &nbsp;[♙回到索引](#article-index)  &nbsp;|&nbsp; 正文开始 ↓
 
 ---
 
