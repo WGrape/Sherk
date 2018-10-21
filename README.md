@@ -36,7 +36,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 - [第二章 ⇨ 关系型数据库系统的基础理论](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter2.md)
 
-- [第三章 ⇨ 关系型数据库系统的代码实现（Sherk 源代码详解）](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter3.md)
+- [第三章 ⇨ 关系型数据库系统的代码实现（Sherk 源码）](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter3.md)
 
 - [第四章 ⇨ 思考和总结](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter4.md)
 
@@ -62,5 +62,5 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 ## ✍ 参考（Reference ）
 > 1. [postgresql官网](https://www.postgresql.org/)<br/>
-> 2. [数据库系统概论 - 王珊]() <br/>
+> 2. [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
 > 3. [如何自己实现一个关系型数据库？]() <br/>
