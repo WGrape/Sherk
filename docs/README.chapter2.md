@@ -513,6 +513,73 @@
                 - 三级封锁协议：
                   在一级封锁协议的基础上增加事务T在读取数据R之前必须先对其加S锁，直到事务结束才释放。  
 
+
+    <table align="center">
+                <tr>
+                    <td rowspan="2" ></td>
+                    <td colspan="2" >X 锁</td>
+                    <td colspan="2" >S 锁</td>
+                    <td colspan="3" >一致性保证</td>
+                </tr>
+                <tr>
+                    <td>操作结束释放</td>
+                    <td>事务结束释放</td>
+                    <td>操作结束释放</td>
+                    <td>事务结束释放</td>
+                    <td>不丢失修改</td>
+                    <td>不读脏数据</td>
+                    <td>可重复读</td>
+                </tr>
+
+                  <tr align="center">
+                   <td>一级封锁协议</td>
+                   <td></td>
+                   <td>√</td>
+                    
+                   <td></td>
+                   <td></td>
+                    
+                   <td>√</td>
+                   <td></td>
+                   <td></td>
+                    
+                  </tr>
+                  
+                  
+                  
+                  <tr align="center">
+                   <td>二级封锁协议</td>
+                   <td></td>
+                   <td>√</td>
+                    
+                   <td>√</td>
+                   <td></td>
+                    
+                   <td>√</td>
+                   <td>√</td>
+                   <td></td>
+                    
+                  </tr>
+                  
+                  
+                  <tr align="center">
+                   <td>三级封锁协议</td>
+                   <td></td>
+                   <td>√</td>
+                    
+                   <td></td>
+                   <td>√</td>
+                    
+                   <td>√</td>
+                   <td>√</td>
+                   <td>√</td>
+                    
+                  </tr>
+
+    </table><br/>    
+    表格来自《数据库系统概论》第5版 - 王珊
+
+
                 上述三级协议的主要区别在于什么操作需要申请封锁，以及何时封锁（即持锁时间）。
                 不同的封锁协议是为了保证数据的一致性。
 
