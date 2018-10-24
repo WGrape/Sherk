@@ -7,4 +7,4 @@ add_executable(
 
         Sherk
 
-        Sherk.c )
+        test.c)
