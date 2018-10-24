@@ -401,7 +401,16 @@
 
             - ###### 数据库规范化（ 范式 ）分类
 
-
+                - <span id="article-4.1.4.3.5.1">第1范式</span>
+                - <span id="article-4.1.4.3.5.2">第2范式</span>
+                - <span id="article-4.1.4.3.5.3">第3范式</span>
+                - <span id="article-4.1.4.3.5.4">第4范式</span>
+                - <span id="article-4.1.4.3.5.5">第5范式</span>
+                - <span id="article-4.1.4.3.5.6">第6范式</span>
+                - <span id="article-4.1.4.3.5.7">BC范式</span>
+                - <span id="article-4.1.4.3.5.8">DK范式</span>
+                - <span id="article-4.1.4.3.5.9">BCNF范式</span>
+                - <span id="article-4.1.4.3.5.10">反范式</span>
 
     - #### 4.1.5 关系键
 
