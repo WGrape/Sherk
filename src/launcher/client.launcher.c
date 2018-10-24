@@ -2,8 +2,7 @@
 #include "../include/object/panel.class.h"
 #include "../include/define/errorcode.h"
 
-
-int launch(){
+int clientLaunch(){
 
     Client client;
     Panel panel;
