@@ -174,6 +174,7 @@
     - [5.1.3 参照完整性](#article-5.1.3)
     - [5.1.4 自定义完整性](#article-5.1.4)
     - [5.1.5 断言（Assertion）](#article-5.1.5)
+    - [5.1.6 触发器（Trigger）](#article-5.1.6)
 
 - #### 5.2 数据存储
 
@@ -212,6 +213,8 @@
         - [查询优化概述](#article-5.4.4.1)
         - [实例讲解](#article-5.4.4.2)
         - [优化方法](#article-5.4.4.3)
+
+    - 5.4.5 数据库预编译
 
 - #### 5.5 日志系统
 
@@ -269,6 +272,7 @@
 
     - [5.8.3 为什么数据库的会话连接非常昂贵（ 耗时 ）？](#article-5.8.3)
 
+- #### 5.9 开放数据库连接 ODBC（Open Database Connectivity） 
 <br/>
 
 
@@ -455,6 +459,9 @@
 
     - #### <span id="article-4.2.5">4.2.5 域完整性</span>
 
+    - #### <span id="article-4.2.6">4.2.6 断言（Assertion）</span>
+    - #### <span id="article-4.2.7">4.2.7 触发器（Trigger）</span>
+
 - ### 4.3 关系的代数运算
 
     - #### <span id="article-4.3.1">4.3.1 集合运算</span>
@@ -501,6 +508,7 @@
     - ##### <span id="article-5.1.3">5.1.3 参照完整性</span>
     - ##### <span id="article-5.1.4">5.1.4 自定义完整性</span>
     - ##### <span id="article-5.1.5">5.1.5 断言（Assertion）</span>
+    - ##### <span id="article-5.1.5">5.1.6 触发器（Trigger）</span>
 
 - #### 5.2 数据存储
 
@@ -537,6 +545,8 @@
         - ###### <span id="article-5.4.4.1">查询优化概述</span>
         - ###### <span id="article-5.4.4.2">实例讲解</span>
         - ###### <span id="article-5.4.4.3">优化方法</span>
+
+    - ##### 5.4.5 数据库预编译
 
 - #### 5.5 日志系统
 
@@ -759,3 +769,5 @@
     
         #### 内容来自
         [为什么数据库连接很“昂贵"？](https://github.com/onlyliuxin/coding2017/issues/451#issuecomment-310850287)
+
+- #### 5.9 开放数据库连接 ODBC（Open Database Connectivity）
