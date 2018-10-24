@@ -468,6 +468,25 @@
         - ##### <span id="article-4.3.2.3">连接</span>
         - ##### <span id="article-4.3.2.4">除</span>
 
+- ### 4.4 SQL
+    
+    - #### <span id="article-4.4.1">概述</span>
+        SQL 是一种结构化查询语言，是一种特定目的编程语言，用于管理关系数据库管理系统（RDBMS），或在关系流数据管理系统（RDSMS）中进行流处理。
+
+        SQL基于关系代数和元组关系演算，包括一个数据定义语言和数据操纵语言。SQL的范围包括数据插入、查询、更新和删除，数据库模式创建和修改，以及数据访问控制。尽管SQL经常被描述为，而且很大程度上是一种声明式编程（4GL），但是其也含有过程式编程的元素。
+
+    - #### SQL结构化查询语言的分类
+
+        - #### <span id="article-4.4.2.1">数据查询语言（DQL）</span>
+            数据查询语言（Data Query Language, DQL）是SQL语言中，负责进行数据查询而不会对数据本身进行修改的语句，这是最基本的SQL语句。DQL的主要功能是查询数据，本身核心指令为SELECT，为了进行精细的查询，加入了各类辅助指令。
+            [具体见维基百科定义](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80)
+
+        - #### <span id="article-4.4.2.2">数据定义语言（DDL） </span>
+            数据定义语言（Data Definition Language，DDL）是SQL语言集中负责数据结构定义与数据库对象定义的语言，由CREATE、ALTER与DROP三个语法所组成，最早是由Codasyl（Conference on Data Systems Languages）数据模型开始，现在被纳入SQL指令中作为其中一个子集。
+
+
+
+        - #### <span id="article-4.4.2.3">数据操纵语言（DML）</span>
 
 <br/>
 
