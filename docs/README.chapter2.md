@@ -393,15 +393,15 @@
             - <span id="article-4.1.4.2.4">删除正常</span>
 
         - ##### <span id="article-4.1.4.3">规范化（关系模式的模式分解）</span>
-            - <span id="article-4.1.4.3.1">函数依赖</span>
-            - <span id="article-4.1.4.3.2">码</span>
-            - <span id="article-4.1.4.3.3">范式</span>
-            - <span id="article-4.1.4.3.4">2NF</span>
-            - <span id="article-4.1.4.3.5">3NF</span>
-            - <span id="article-4.1.4.3.6">BCNF</span>
-            - <span id="article-4.1.4.3.7">多值依赖</span>
-            - <span id="article-4.1.4.3.8">4NF</span>
-            - <span id="article-4.1.4.3.9">反范式</span>
+
+            - <span id="article-4.1.4.3.1">数据库规范化</span>
+            - <span id="article-4.1.4.3.2">函数依赖</span>
+            - <span id="article-4.1.4.3.3">码</span>
+            - <span id="article-4.1.4.3.4">多值依赖</span>
+
+            - ###### 数据库规范化（ 范式 ）分类
+
+
 
     - #### 4.1.5 关系键
 
