@@ -216,7 +216,8 @@
             - [FULLTEXT索引](#article-5.3.2.3.3)
 
             - [R-Tree索引（Spatial 索引，即空间索引）](#article-5.3.2.3.4)
-    - [5.3.2 索引的创建](#article-5.3.3)
+
+    - [5.3.3 索引的创建](#article-5.3.3)
 
 
 - #### 5.4 查询处理
@@ -556,22 +557,30 @@
         > * 索引是在存储引擎（Storage Engine）层面实现的，而不是server层面。因此==不是所有的存储引擎都支持所有的索引类型。==
         > * 即使多个存储引擎支持某一索引类型，它们的实现和行为也可能有所差别。
 
+        索引原理可查看此文章[MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+
+         <img height="250px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter2/mysql-index-theory.png">
+
     - ##### 5.3.2 <span id="article-5.3.2">索引的分类</span>
 
         - ###### <span id="article-5.3.2.1">5.3.2.1 从逻辑角度</span>
 
             - ###### <span id="article-5.3.2.1.1">主键索引</span>
+                主键索引是一种特殊的唯一索引，不允许有空值
 
             - ###### <span id="article-5.3.2.1.2">唯一索引或者非唯一索引</span>
 
             - ###### <span id="article-5.3.2.1.3">多列索引（复合索引）</span>
+                复合索引指多个字段上创建的索引，只有在查询条件中使用了创建索引时的第一个字段，索引才会被使用。使用复合索引时遵循最左前缀集合
 
             - ###### <span id="article-5.3.2.1.4">普通索引或者单列索引</span>
 
-            - ###### <span id="article-5.3.2.1.5">空间索引</span>
+            - ###### <span id="article-5.3.2.1.5">空间索引（用于对GIS数据类型创建SPATIAL索引）</span>
+                空间索引是对空间数据类型的字段建立的索引，MYSQL中的空间数据类型有4种，分别是GEOMETRY、POINT、LINESTRING、POLYGON。
+                MYSQL使用SPATIAL关键字进行扩展，使得能够用于创建正规索引类型的语法创建空间索引。创建空间索引的列，必须将其声明为NOT NULL，空间索引只能在存储引擎为MYISAM的表中创建
 
         - ###### <span id="article-5.3.2.2">5.3.2.2 从物理角度</span>
-
+        
             - ###### <span id="article-5.3.2.2.1">聚集索引（clustered index）</span>
 
                 一种索引，该索引中键值的逻辑顺序决定了表中相应行的物理顺序。 
@@ -593,19 +602,28 @@
 
         - ###### <span id="article-5.3.2.3">5.3.2.3 从数据结构角度</span>
 
-            - ###### <span id="article-5.3.2.3.1">B+树索引</span>
+            - ###### <span id="article-5.3.2.3.1">B+树索引 [ O(log(n)) ] </span>\
+                关于B+树索引，参考 [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 
             - ###### <span id="article-5.3.2.3.2">Hash索引</span>
+                * 仅仅能满足"=","IN"和"<=>"查询，不能使用范围查询
+                * 其检索效率非常高，索引的检索可以一次定位，不像B-Tree 索引需要从根节点到枝节点，最后才能访问到页节点这样多次的IO访问，所以 Hash 索引的查询效率要远高于B-Tree 索引
+                * 只有Memory存储引擎显示支持hash索引
 
-            - ###### <span id="article-5.3.2.3.3">FULLTEXT索引</span>
+            - ###### <span id="article-5.3.2.3.3">FULLTEXT索引（全文索引）</span>
+                主要用来查找文本中的关键字，而不是直接与索引中的值相比较。Full-text索引跟其它索引大不相同，它更像是一个搜索引擎，而不是简单的WHERE语句的参数匹配。你可以对某列分别进行full-text索引和B-Tree索引，两者互不冲突。Full-text索引配合MATCH AGAINST操作使用，而不是一般的WHERE语句加LIKE。
 
             - ###### <span id="article-5.3.2.3.4">R-Tree索引（Spatial 索引，即空间索引）</span>
+
+                用于对GIS数据类型创建SPATIAL索引 ，但是只有MyISAM引擎支持，并且支持的不好。可以忽略。
 
     - ##### 5.3.3 <span id="article-5.3.3">索引的创建</span>
 
         ```
         CREATE TABLE table_name[col_name data type]
         [unique|fulltext|spatial][index|key][index_name](col_name[length])[asc|desc]
+        ```
+
         1、unique|fulltext|spatial为可选参数，分别表示唯一索引、全文索引和空间索引；
 
         2、index和key为同义词，两者作用相同，用来指定创建索引
@@ -617,7 +635,6 @@
         5、length为可选参数，表示索引的长度，只有字符串类型的字段才能指定索引长度；
 
         6、asc或desc指定升序或降序的索引值存储
-        ```
 
 
 - #### 5.4 查询处理

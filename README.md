@@ -69,3 +69,4 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
 > * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
 > * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
+> * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
