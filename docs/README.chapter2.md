@@ -559,7 +559,7 @@
 
         索引原理可查看此文章[MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 
-         <img height="250px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter2/mysql-index-theory.png">
+         <img height="150px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter2/mysql-index-theory.png">
 
     - ##### 5.3.2 <span id="article-5.3.2">索引的分类</span>
 

@@ -1,6 +1,6 @@
 #include "../include/object/Server.class.h"
 #include "../include/define/errorcode.h"
-
+#include "../include/readConfig/readConfig.h"
 
 int clientLaunch(){
 
