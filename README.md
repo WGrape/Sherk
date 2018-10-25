@@ -61,11 +61,11 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 <br>
 
 ## ✍ 参考（Reference ）
-> 1. [postgresql官网](https://www.postgresql.org/)<br/>
-> 2. [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
-> 3. [如何自己实现一个关系型数据库？]() <br/>
-> 4. [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
-> 5. [维基百科](https://www.wikipedia.org/)
-> 6. [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
-> 7. [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
-> 8. [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
+> * [postgresql官网](https://www.postgresql.org/)<br/>
+> * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
+> * [如何自己实现一个关系型数据库？]() <br/>
+> * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
+> * [维基百科](https://www.wikipedia.org/)
+> * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
+> * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
+> * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)

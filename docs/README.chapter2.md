@@ -216,6 +216,8 @@
             - [FULLTEXT索引](#article-5.3.2.3.3)
 
             - [R-Tree索引（Spatial 索引，即空间索引）](#article-5.3.2.3.4)
+    - [5.3.2 索引的创建](#article-5.3.3)
+
 
 - #### 5.4 查询处理
 
@@ -598,6 +600,25 @@
             - ###### <span id="article-5.3.2.3.3">FULLTEXT索引</span>
 
             - ###### <span id="article-5.3.2.3.4">R-Tree索引（Spatial 索引，即空间索引）</span>
+
+    - ##### 5.3.3 <span id="article-5.3.3">索引的创建</span>
+
+        ```
+        CREATE TABLE table_name[col_name data type]
+        [unique|fulltext|spatial][index|key][index_name](col_name[length])[asc|desc]
+        1、unique|fulltext|spatial为可选参数，分别表示唯一索引、全文索引和空间索引；
+
+        2、index和key为同义词，两者作用相同，用来指定创建索引
+
+        3、col_name为需要创建索引的字段列，该列必须从数据表中该定义的多个列中选择；
+
+        4、index_name指定索引的名称，为可选参数，如果不指定，MYSQL默认col_name为索引值；
+
+        5、length为可选参数，表示索引的长度，只有字符串类型的字段才能指定索引长度；
+
+        6、asc或desc指定升序或降序的索引值存储
+        ```
+
 
 - #### 5.4 查询处理
 
