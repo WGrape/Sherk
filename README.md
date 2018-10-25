@@ -12,7 +12,7 @@
 <br/>
 
 <div align="center">
-<img height="40px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/2.jpg">
+<img height="37px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/logo/2.jpg">
 <p><font size=2>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
