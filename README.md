@@ -48,9 +48,9 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 ## <span id="article-usage">♗ 使用（Usage）</span>
     1. 下载项目 ( Download )
 
-    2. 如果你了解如何使用不同平台下的编译命令，那你使用编译命令编译 Sherk.c 源文件即可。( Compile )
+    2. 如果你了解如何使用不同平台下的编译命令，你需要分别编译客户端源文件(bin/client/client.c)和服务端源文件(bin/server/server.c)，编译完之后运行即可。（可以开启多个客户端）
 
-    3. 如果你不了解编译命令，你也可以使用 Clion 打开项目，运行 Sherk.c 文件即可。( Run )
+    3. 如果你不了解编译命令，你也可以使用 Clion 打开项目，分别运行客户端和服务端的源文件。
 
 <br>
 
@@ -70,3 +70,6 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
 > * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
 > * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+> * [ORACLE 博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
+> * [What are the MySQL Privilege Tables?](http://www.idevelopment.info/)
+

@@ -1,4 +1,4 @@
-# 第三章 ⇨ 附录
+# 附录
 
 - [☝ 回到首页](https://github.com/Lvsi-China/Sherk)
 - [第一章 ⇨ Sherk 使用手册](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter1.md)
