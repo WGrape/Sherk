@@ -63,23 +63,23 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 <br>
 
 ## ✍ 参考（Reference ）
-> * [postgresql官网](https://www.postgresql.org/)<br/>
-> * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
-> * [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156?sort=created&page=1) <br/>
-> * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
-> * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
 > * [维基百科](https://www.wikipedia.org/)
-> * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
-> * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
-> * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
-> * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
-> * [ORACLE 博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
-> * [What are the MySQL Privilege Tables?](http://www.idevelopment.info/)
 > * [数据库集群](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E7%BE%A4)
 > * [创建数据库集群](https://docs.huihoo.com/postgresql/pgsqldoc-7.1C/creating-cluster.html)
-> * [基于MySQL的数据库集群系统的实现](https://www.ibm.com/developerworks/cn/linux/database/mysql-ha/index.html)
+> * [postgresql官网](https://www.postgresql.org/)<br/>
+> * [数据库集群技术漫谈](http://www.cnblogs.com/CareySon/p/3627594.html)
+> * [ORACLE 博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
+> * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
+> * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
+> * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
+> * [五大常见的MySQL高可用方案](https://zhuanlan.zhihu.com/p/25960208)
 > * [MySQL数据库集群的原理与搭建](https://blog.csdn.net/zhou2s_101216/article/details/50757452)
 > * [浅谈高性能数据库集群——读写分离](https://juejin.im/post/5b3b491a6fb9a04f8751dff4)
-> * [数据库集群技术漫谈](http://www.cnblogs.com/CareySon/p/3627594.html)
-> * [五大常见的MySQL高可用方案](https://zhuanlan.zhihu.com/p/25960208)
 > * [数据库集群主从架构查询功能设计](https://segmentfault.com/a/1190000008515715)
+> * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
+> * [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156?sort=created&page=1) <br/>
+> * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
+> * [基于MySQL的数据库集群系统的实现](https://www.ibm.com/developerworks/cn/linux/database/mysql-ha/index.html)
+> * [What are the MySQL Privilege Tables?](http://www.idevelopment.info/)
+> * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+> * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
