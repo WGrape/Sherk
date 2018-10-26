@@ -257,7 +257,9 @@
             - [隔离性 ( Isolation )](#article-5.6.1.3.3)
             - [持久性 ( Durability )](#article-5.6.1.3.4)
 
-        - [实例讲解](#article-5.6.1.4)
+        - [事务的自动提交](#article-5.6.1.4)
+
+        - [实例讲解](#article-5.6.1.5)
 
     - ##### 5.6.2 并发控制
 
@@ -274,7 +276,7 @@
         - [登记日志文件](#article-5.6.3.3)
         - [检查点恢复技术](#article-5.6.3.4)
 
-- #### 5.7 安全性
+- #### 5.7 安全性保护
 
     - [5.7.1 概述](#article-5.7.1)
     - [5.7.2 视图](#article-5.7.2)
@@ -289,21 +291,25 @@
         - [存储加密](#article-5.7.5.1)
         - [传输加密](#article-5.7.5.2)
 
+- #### 5.8 [数据库的引擎](#article-5.8)
 
-- #### 5.8 数据库的会话连接
+- #### 5.9 数据库的会话连接
 
-    - [5.8.1 概述](#article-5.8.1)
+    - [5.9.1 概述](#article-5.9.1)
 
-    - [5.8.2 Socket讲解](#article-5.8.2)
+    - [5.9.2 Socket讲解](#article-5.9.2)
 
-    - [5.8.3 会话连接原理](#article-5.8.3)
+    - [5.9.3 会话连接原理](#article-5.9.3)
 
-    - [5.8.4 会话保持原理](#article-5.8.4)
+    - [5.9.4 会话保持原理](#article-5.9.4)
 
-    - [5.8.5 为什么数据库的会话连接非常昂贵（ 耗时 ）？](#article-5.8.5)
+    - [5.9.5 为什么数据库的会话连接非常昂贵（ 耗时 ）？](#article-5.9.5)
 
+- #### 5.10 数据库中的多线程处理
 
-- #### 5.9 开放数据库连接 ODBC（Open Database Connectivity） 
+    - [5.10.1 概述](#article-5.10.1)
+
+- #### 5.11 开放数据库连接 ODBC（Open Database Connectivity） 
 
 - #### 杂项
     
@@ -534,7 +540,7 @@
 ## 5. 关系型数据库系统的理论架构
 
 - #### 5.1 完整性
--
+
     - ##### <span id="article-5.1.1">5.1.1 概述</span>
     - ##### <span id="article-5.1.2">5.1.2 实体完整性</span>
     - ##### <span id="article-5.1.3">5.1.3 参照完整性</span>
@@ -639,7 +645,6 @@
 
         6、asc或desc指定升序或降序的索引值存储
 
-
 - #### 5.4 查询处理
 
     - ##### <span id="article-5.4.1">5.4.1 概述</span>
@@ -676,7 +681,7 @@
         
         - ##### <span id="article-5.6.1.2">图解事务</span>
 
-        - ##### 事务的 ACID 特性
+        - ##### <span id="article-5.6.1.3">事务的 ACID 特性</span>
             
             - ###### <span id="article-5.6.1.3.1">原子性 ( Atomicity )</span>
                 是指一个事务中包含的所有操作，要么全做，要么全不做。
@@ -713,8 +718,18 @@
             
                 在事务完成以后，该事务对数据库所作的更改便持久的保存在数据库之中，并不会被回滚。
 
+        - ##### <span id="article-5.6.1.4">事务的自动提交</span>
+            mysql默认采用```AutoCommit```模式，也就是说```每个sql都是一个事务，每个事务会被自动提交，并不需要我们去显示的执行事务。```
+            如果autoCommit关闭，则每个sql都默认开启一个事务，而且只有当我们显式的执行```commit```后这个事务才会被提交。
 
-- <span id="article-5.6.1.4">实例讲解</span>
+            ```
+            show variables like "autocommit";
+            
+            set autocommit=0; // 0表示关闭AutoCommit
+            set autocommit=1; // 1表示开启AutoCommit
+            ```
+
+        - ##### <span id="article-5.6.1.5">实例讲解</span>
 
     - ##### 5.6.2 并发控制
 
@@ -834,7 +849,7 @@
         - ###### <span id="article-5.6.3.3">登记日志文件</span>
         - ###### <span id="article-5.6.3.4">检查点恢复技术</span>
 
-- #### 5.7 安全性
+- #### 5.7 安全性保护
 
     - ##### <span id="article-5.7.1">5.7.1 概述</span>
     - ##### <span id="article-5.7.2">5.7.2 视图</span>
@@ -859,20 +874,35 @@
         - ###### <span id="article-5.7.5.1">存储加密</span>
         - ###### <span id="article-5.7.5.2">传输加密</span>
 
+- #### <span id="article-5.8">5.8 数据库的引擎</span>
+
+    面对用户对数据的不同需求，通常构建不同的数据库引擎以供用户的自由选择。
+    数据库引擎是用于存储、处理和保护数据的核心服务。利用数据库引擎可控制访问权限并快速处理事务，从而满足企业内大多数需要处理大量数据的应用程序的要求。 使用数据库引擎创建用于联机事务处理或联机分析处理数据的关系数据库。这包括创建用于存储数据的表和用于查看、管理和保护数据安全的数据库对象（如索引、视图和存储过程）。
+
+    ```Oracle没有数据库引擎的概念```<br/>
+    oracle中不存在引擎的概念，数据处理大致可以分成两大类：联机事务处理OLTP（on-line transaction processing）、联机分析处理OLAP（On-Line Analytical Processing）。OLTP是传统的关系型数据库的主要应用，主要是基本的、日常的事务处理，例如银行交易。OLAP是数据仓库系统的主要应用，支持复杂的分析操作，侧重决策支持，并且提供直观易懂的查询结果。
+
+    OLTP 系统强调数据库内存效率，强调内存各种指标的命令率，强调绑定变量，强调并发操作； 
+    OLAP 系统则强调数据分析，强调SQL执行市场，强调磁盘I/O，强调分区等。
+
+    ```Mysql常见的数据库引擎```
+    * MYISAM
+
+    * InnoDB
 
 
-- #### 5.8 数据库的会话连接
+- #### 5.9 与数据库的会话连接
 
-    - ##### <span id="article-5.8.1">5.8.1 概述</span>
+    - ##### <span id="article-5.9.1">5.9.1 概述</span>
 
-    - ##### <span id="article-5.8.2">5.8.2 Socket讲解</span>
+    - ##### <span id="article-5.9.2">5.9.2 Socket讲解</span>
         Socket（插座）即网络套接字，也就是网络接口
 
-    - ##### <span id="article-5.8.3">5.8.3 会话连接原理</span>
+    - ##### <span id="article-5.9.3">5.9.3 会话连接原理</span>
 
-    - ##### <span id="article-5.8.4">5.8.4 会话保持原理</span>
+    - ##### <span id="article-5.9.4">5.9.4 会话保持原理</span>
 
-    - ##### <span id="article-5.8.5">5.8.5 为什么数据库的会话连接非常昂贵（ 耗时 ）？</span>
+    - ##### <span id="article-5.9.5">5.9.5 为什么数据库的会话连接非常昂贵（ 耗时 ）？</span>
         
         内容来自 [为什么数据库连接很“昂贵"](https://github.com/onlyliuxin/coding2017/issues/451#issuecomment-310850287)
         > 
@@ -914,7 +944,12 @@
         
         <img height="200px" src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/chapter2/connection-pool.jpg">
 
-- #### 5.9 开放数据库连接 ODBC（Open Database Connectivity）
+- #### <span id="article-5.10">5.10 数据库中的多线程处理</span>
+
+    - #### <span id="article-5.10.1">5.10.1 概述</span>
+        程序的模型可以采用单进程多线程模型和多进程单线程模型 。
+
+- #### 5.11 开放数据库连接 ODBC（Open Database Connectivity）
 
 - #### 杂项
     

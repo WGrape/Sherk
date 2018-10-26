@@ -16,6 +16,24 @@
 <p><font size=2>A Relational Database System Implementation Based on C Language</font></p>
 </div>
 
+<p align="center">
+<a href="https://github.com/PuShaoWei/arithmetic-php#简易结构">
+  <img src="https://img.shields.io/badge/php-done-brightgreen.svg" alt="php">
+</a>
+<a href="https://github.com/PuShaoWei/arithmetic-php">
+    <img src="https://img.shields.io/github/issues-pr-raw/arithmetic-php/cdnjs.svg">
+</a>
+<a href="https://github.com/PuShaoWei/arithmetic-php">
+    <img src="https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg">
+</a>
+<a href="https://github.com/PuShaoWei/arithmetic-php">
+    <img src="https://img.shields.io/travis/rust-lang/rust.svg">
+</a>
+<a href="https://github.com/PuShaoWei/arithmetic-php">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg">
+</a>
+</p>
+
 <br>
 
 > ### 不断更新中( updating ) ...
@@ -67,6 +85,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [数据库集群](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E7%BE%A4)
 > * [创建数据库集群](https://docs.huihoo.com/postgresql/pgsqldoc-7.1C/creating-cluster.html)
 > * [postgresql官网](https://www.postgresql.org/)<br/>
+> * [mysql 数据库引擎](https://www.cnblogs.com/0201zcr/p/5296843.html)
 > * [数据库集群技术漫谈](http://www.cnblogs.com/CareySon/p/3627594.html)
 > * [ORACLE 博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
 > * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
@@ -80,6 +99,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156?sort=created&page=1) <br/>
 > * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
 > * [基于MySQL的数据库集群系统的实现](https://www.ibm.com/developerworks/cn/linux/database/mysql-ha/index.html)
+> * [深入理解Mysql——锁、事务与并发控制](https://blog.csdn.net/lemon89/article/details/51477497)
 > * [What are the MySQL Privilege Tables?](http://www.idevelopment.info/)
 > * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 > * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
