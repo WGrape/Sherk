@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <threads/include/pthread.h>
+#include <sys/time.h>
+
 #include "../../src/launcher/client.launcher.c"
 
 
@@ -10,7 +13,9 @@
 
 int main(int argc, char *argv[]){
 
-	clientLaunch();
+    pthread_t pid;
+
+    clientLaunch();
 
 	return 0;
 }
