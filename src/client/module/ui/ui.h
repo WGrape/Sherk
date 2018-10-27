@@ -6,7 +6,13 @@
 #include "../../include/object/User.h"
 
 extern User ui_print_login_dialog();
+
 extern void ui_print_welcome();
+
 extern void ui_print_illegal_input();
+
+extern char* ui_print_wait_for_input();
+
+extern void ui_print_logo();
 
 #endif
