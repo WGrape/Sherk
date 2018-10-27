@@ -38,6 +38,8 @@
 <br>
 
 ## ✎ 摘要（Synopsis）
+<img src="https://github.com/Lvsi-China/Sherk/raw/master/extra/image/synopsis/ui.jpg">
+
 Sherk是基于C语言实现的关系型数据库，实现了关系型数据库的基本功能
 
 

@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <conio.h>
 #include "../../include/define/const.h"
 #include "../../include/object/User.h"
 
@@ -8,8 +10,43 @@ User ui_print_login_dialog() {
 
     char name[30];
     char password[30];
-    printf("Please input your name and your password : ");
-    scanf("%s %s", &name, &password);
+
+    while (1) {
+
+        // 输入用户名
+        printf("Please input your name : ");
+        scanf("%s", &name);
+
+        // 吃掉回车
+        getchar();
+
+        // 安全显示输入的密码
+        printf("Please input your password : ");
+        for (int i = 0;; ++i) {
+
+            password[i] = getch();
+            if (password[i] == '\n' || password[i] == '\r') {
+
+                getchar(); // 吃掉回车
+
+                password[i]='\0';
+                break;
+            }
+            putchar('*');
+        }
+
+        // 判断用户名和密码是否合法
+        int len1 = strlen(name);
+        int len2 = strlen(password);
+        if (len1 < 5 || len1 > 20 || len2 < 5 || len2 > 20) {
+
+            printf("Your name or password is not valid\n");
+        } else {
+
+            break;
+        }
+    }
+
 
     User user = {name, password};
 
@@ -29,11 +66,11 @@ void ui_print_illegal_input() {
 }
 
 // 打印出等待输入
-char* ui_print_wait_for_input() {
+char *ui_print_wait_for_input() {
 
-    char *sql = (char*)(malloc(sizeof(char)*100000)); // 暂定10万个字符
+    char *sql = (char *) (malloc(sizeof(char) * 100000)); // 暂定10万个字符
     printf("sherk > ");
-    scanf("%s",sql);
+    scanf("%s", sql);
     return sql;
 }
 
