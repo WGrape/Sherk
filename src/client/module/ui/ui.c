@@ -40,7 +40,7 @@ User ui_print_login_dialog() {
     return user;
 }
 
-// 登录成功时，打印此对话框
+// 登录成功时，打印欢迎语
 void ui_print_welcome() {
 
     printf("Welcome ! The sherk client star-up successfully !\n");
@@ -56,7 +56,7 @@ void ui_print_illegal_input() {
 char *ui_print_wait_for_input() {
 
     char *sql = (char *) (malloc(sizeof(char) * 100000)); // 暂定10万个字符
-    printf("sherk > ");
+    printf("\nsherk > ");
     scanf("%s", sql);
     return sql;
 }
@@ -115,4 +115,10 @@ void ui_print_logo() {
            "                         `----'                      \n"
            "                                                     ");
     printf("\n");
+}
+
+// 退出成功时，打印再见语
+void ui_print_bye(){
+
+    printf("Thanks for using sherk!\n");
 }

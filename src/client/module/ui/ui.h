@@ -15,4 +15,6 @@ extern char* ui_print_wait_for_input();
 
 extern void ui_print_logo();
 
+extern void ui_print_bye();
+
 #endif

@@ -7,13 +7,13 @@
 // 命令行模块
 
 // 判断是否登录成功
-int command_login_success(int argc, char **argv){
+int command_login_success(int argc, char **argv) {
 
     // 是登录命令
-    if( argc>1 && strcmp(strlwr(argv[0]),"sherk")==0 && strcmp(strlwr(argv[1]),"login") == 0 ){
+    if (argc > 1 && strcmp(strlwr(argv[0]), "sherk") == 0 && strcmp(strlwr(argv[1]), "login") == 0) {
 
         // 凭证正确
-        if(certificate_login(ui_print_login_dialog())){
+        if (certificate_login(ui_print_login_dialog())) {
 
             system("cls");
 
@@ -28,38 +28,37 @@ int command_login_success(int argc, char **argv){
         return 0;
     }
 
-    // 不是登录命令
+    // 不是合法的命令
     ui_print_illegal_input();
 
     return 0;
 }
 
 // 判断是否退出成功
-int command_logout_success(){
+int command_logout_success() {
 
-    command_sql_interactive_env_loop();
+    command_sql_interactive_env();
+
+    ui_print_bye();
 
     return 1;
 }
 
 
-// 循环sql输入环境
-void command_sql_interactive_env_loop(){
+// sql交互环境
+void command_sql_interactive_env() {
 
-    while(1){
+    while (1) {
 
         // UI打印出等待输出的状态
         char *sql = ui_print_wait_for_input();
 
         // 输入的sql为退出语句
-        if(strcmp(sql,"sherk exit")==0||strcmp(sql,"sherk logout")==0){
+        if (strcmp(sql, "sherk exit") == 0 || strcmp(sql, "sherk logout") == 0) {
 
             free(sql);
             break;
         }
     }
-
-
-    // 退出sql环境
 
 }
