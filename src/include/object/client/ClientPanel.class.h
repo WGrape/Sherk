@@ -1,10 +1,20 @@
+#ifndef OBJECT_CLIENT_PANEL
+#define OBJECT_CLIENT_PANEL
+
 #include <stdio.h>
 
-// 控制面板
-typedef struct Panel {
+// 客户端的控制面板
+typedef struct ClientPanel {
 
 
-} Panel;
+} ClientPanel;
+
+
+extern void client_panel_printLogo();
+
+extern void client_panel_startup();
+
+#endif
 
 
 static void panelPrintLogo() {

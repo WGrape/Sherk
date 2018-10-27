@@ -100,3 +100,4 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [What are the MySQL Privilege Tables?](http://www.idevelopment.info/)
 > * [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 > * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
+> * [Mysql存储引擎InnoDB和MyISAM对比总结](my.oschina.net/cughmy/blog/2221997)

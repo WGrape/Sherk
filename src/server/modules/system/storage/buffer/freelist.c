@@ -190,7 +190,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state)
 
 	/*
 	 * If given a strategy object, see whether it can select a buffer. We
-	 * assume strategy objects don't need buffer_strategy_lock.
+	 * assume strategy object don't need buffer_strategy_lock.
 	 */
 	if (strategy != NULL)
 	{
