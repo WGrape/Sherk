@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "../ui/ui.h"
-#include "../login/login.h"
+#include "../certificate/certificate.h"
 
 // 命令行模块
 
@@ -8,10 +8,9 @@
 int command_login_success(int argc, char argv[]){
 
     // 是登录命令
-    if( argc>1 && argv[0] == "sherk" && argv[1] == "login" ){
+    if( argc>1 && argv[0] == "sherk" && argv[1] == "certificate" ){
 
-        ui_print_login_dialog();
-        return 1;
+        return certificate_login(ui_print_login_dialog());
     }
 
     // 不是登录命令

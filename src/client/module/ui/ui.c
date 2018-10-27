@@ -11,7 +11,7 @@ User ui_print_login_dialog(){
     printf("输入用户名和密码 ：");
     scanf("%s %s",&name,&password);
 
-    return user={
+    return user = {
 
             name:name,
             password:password
