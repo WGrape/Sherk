@@ -9,7 +9,7 @@
 
 // 网络模块
 
-int network_connect() {
+int network_socket_connect() {
 
     // create a socket
     int network_socket = socket(AF_INET, SOCK_STREAM, 0); // 0表示使用默认的 TCP 协议
@@ -25,6 +25,7 @@ int network_connect() {
     if(connection_status == -1){
 
         printf("There was an error making a connection to the remote socket \n\n");
+        return 0;
     }
 
     // receive data from the server
@@ -37,23 +38,10 @@ int network_connect() {
     // and then close the socket
     closesocket(socket);
 
-    return 0;
+    return 1;
 }
 
 int network_close() {
-
-
-}
-
-
-// 登录
-int network_login() {
-
-
-}
-
-// 退出
-int network_logout() {
 
 
 }

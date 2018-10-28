@@ -7,6 +7,8 @@
 // 运输 sql 语句
 char* express_transport_sql(char *sql){
 
+    network_socket_connect();
+
     return sql;
 }
 
