@@ -43,7 +43,7 @@ User ui_print_login_dialog() {
 // 登录成功时，打印欢迎语
 void ui_print_welcome() {
 
-    printf("Welcome ! The sherk client star-up successfully !\n");
+    printf("Welcome ! The sherk client star-up successfully !\n\n");
 }
 
 // 打印出非法输入
@@ -55,7 +55,7 @@ void ui_print_illegal_input() {
 // 打印出等待输入
 void ui_print_wait_for_input(char *sql) {
 
-    printf("\nsherk > ");
+    printf("sherk > ");
     gets(sql);
 }
 
