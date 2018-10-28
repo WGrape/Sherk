@@ -3,7 +3,7 @@
 #include "../../include/object/SQLResponseData.h"
 
 
-extern SQLResponseData express_receive_sql(char *sql);
+extern char* express_call(char *sql);
 
 
 #endif

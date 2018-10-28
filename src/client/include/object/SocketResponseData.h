@@ -1,8 +1,10 @@
-//
-// Created by Administrator on 2018/10/28.
-//
+#ifndef CLIENT_INCLUDE_OBJECT_SOCKETRESPONSEDATA_H
+#define CLIENT_INCLUDE_OBJECT_SOCKETRESPONSEDATA_H
 
-#ifndef SHERK_SOCKETRESPONSEDATA_H
-#define SHERK_SOCKETRESPONSEDATA_H
+typedef struct {
 
-#endif //SHERK_SOCKETRESPONSEDATA_H
+    int msg;
+
+}SocketResponseData;
+
+#endif

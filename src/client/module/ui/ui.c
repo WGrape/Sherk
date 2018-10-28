@@ -128,9 +128,9 @@ void ui_print_account_not_exist(){
 }
 
 // 打印出sql响应的数据
-void ui_print_sql_response_data(char *p){
+void ui_print_sql_response_data(char *s){
 
-    printf("%s\n",p);
+    printf("%s\n",s);
 }
 
 

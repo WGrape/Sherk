@@ -60,8 +60,8 @@ void command_enter_sql_interactive_env() {
             break;
         } else{
 
-            // 快递服务模块接收 sql 语句
-            ui_print_sql_response_data(ui_express_receive_sql(sql));
+            // UI打印出 sql 查询的结构( 快递模块接收 sql 语句 )
+            ui_print_sql_response_data(express_call(sql));
 
             free(sql);
         }
