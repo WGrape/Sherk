@@ -4,14 +4,12 @@
 // #include <netinet/in.h>
 #include <winsock2.h>
 
-#pragma comment(lib, "ws2_32.lib")
-
-
 
 // 网络模块
 
 int network_socket_connect() {
 
+    // WSA初始化
     WSADATA wsaData;
     WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -43,6 +41,7 @@ int network_socket_connect() {
     // and then close the socket
     closesocket(socket);
 
+    // 清理 WSA
     WSACleanup();
 
     return 1;

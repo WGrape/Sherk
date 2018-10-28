@@ -8,6 +8,7 @@
 
 int main(){
 
+    // WSA初始化
     WSADATA wsaData;
     WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -31,6 +32,7 @@ int main(){
         return 0;
     }
 
+    // listen
     if( -1 == listen(server_socket,5) ){
 
         printf("Sherk server bind with a socket error : %d\n\n", WSAGetLastError());
@@ -45,9 +47,8 @@ int main(){
     // and then close the socket
     closesocket(socket);
 
-
+    // 清理 WSA
     WSACleanup();
-
 
     return 0;
 }
