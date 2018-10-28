@@ -1,0 +1,8 @@
+//
+// Created by Administrator on 2018/10/28.
+//
+
+#ifndef SHERK_SOCKETRESPONSEDATA_H
+#define SHERK_SOCKETRESPONSEDATA_H
+
+#endif //SHERK_SOCKETRESPONSEDATA_H

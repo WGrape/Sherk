@@ -11,10 +11,14 @@ extern void ui_print_welcome();
 
 extern void ui_print_illegal_input();
 
-extern char* ui_print_wait_for_input();
+extern void ui_print_wait_for_input(char *sql);
 
 extern void ui_print_logo();
 
 extern void ui_print_bye();
+
+extern void ui_print_account_not_exist();
+
+extern void ui_print_sql_response_data();
 
 #endif

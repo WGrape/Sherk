@@ -1,8 +1,9 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../ui/ui.h"
 #include "../certificate/certificate.h"
-
+#include "../express/express.h"
 
 // 命令行模块
 
@@ -25,19 +26,17 @@ int command_login_success(int argc, char **argv) {
         }
 
         // 凭证非法
+        ui_print_account_not_exist();
         return 0;
     }
 
     // 不是合法的命令
     ui_print_illegal_input();
-
     return 0;
 }
 
 // 判断是否退出成功
 int command_logout_success() {
-
-    command_sql_interactive_env();
 
     ui_print_bye();
 
@@ -45,19 +44,26 @@ int command_logout_success() {
 }
 
 
-// sql交互环境
-void command_sql_interactive_env() {
+// 进入sql交互环境
+void command_enter_sql_interactive_env() {
 
     while (1) {
 
         // UI打印出等待输出的状态
-        char *sql = ui_print_wait_for_input();
+        char *sql = (char *) (malloc(sizeof(char) * 100000));
+        ui_print_wait_for_input(sql);
 
         // 输入的sql为退出语句
         if (strcmp(sql, "sherk exit") == 0 || strcmp(sql, "sherk logout") == 0) {
 
             free(sql);
             break;
+        } else{
+
+            // 快递服务模块接收 sql 语句
+            ui_print_sql_response_data(ui_express_receive_sql(sql));
+
+            free(sql);
         }
     }
 

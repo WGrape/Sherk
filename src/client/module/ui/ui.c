@@ -53,12 +53,10 @@ void ui_print_illegal_input() {
 }
 
 // 打印出等待输入
-char *ui_print_wait_for_input() {
+void ui_print_wait_for_input(char *sql) {
 
-    char *sql = (char *) (malloc(sizeof(char) * 100000)); // 暂定10万个字符
     printf("\nsherk > ");
-    scanf("%s", sql);
-    return sql;
+    gets(sql);
 }
 
 // 安全的输入密码
@@ -122,3 +120,17 @@ void ui_print_bye(){
 
     printf("Thanks for using sherk!\n");
 }
+
+// 打印出账号不存在
+void ui_print_account_not_exist(){
+
+    printf("Account not esist!\n");
+}
+
+// 打印出sql响应的数据
+void ui_print_sql_response_data(char *p){
+
+    printf("%s\n",p);
+}
+
+
