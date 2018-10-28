@@ -31,7 +31,7 @@ int network_connect() {
 
     // send the message
     send(client_socket,server_message, sizeof(server_message),0);
-    
+
     // and then close the socket
     closesocket(socket);
 
