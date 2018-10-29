@@ -1,0 +1,8 @@
+#ifndef CLIENT_INCLUDE_DEFINE_MESSAGE_H
+#define CLIENT_INCLUDE_DEFINE_MESSAGE_H
+
+// 消息
+
+
+
+#endif
