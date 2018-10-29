@@ -4,6 +4,8 @@
 #include "../ui/ui.h"
 #include "../certificate/certificate.h"
 #include "../express/express.h"
+#include "../../include/define/rescode.h"
+
 
 // 命令行模块
 
@@ -14,7 +16,7 @@ int command_login_success(int argc, char **argv) {
     if (argc > 1 && strcmp(strlwr(argv[0]), "sherk") == 0 && strcmp(strlwr(argv[1]), "login") == 0) {
 
         // 凭证正确
-        if (certificate_login(ui_print_login_dialog())) {
+        if (RES_OK == certificate_login(ui_print_login_dialog())) {
 
             system("cls");
 
@@ -22,17 +24,17 @@ int command_login_success(int argc, char **argv) {
             ui_print_logo();
             ui_print_welcome();
 
-            return 1;
+            return 0;
         }
 
-        // 凭证非法
+        // 凭证错误
         ui_print_account_not_exist();
-        return 0;
+        return 1;
     }
 
     // 不是合法的命令
     ui_print_illegal_input();
-    return 0;
+    return -1;
 }
 
 // 判断是否退出成功
@@ -40,7 +42,7 @@ int command_logout_success() {
 
     ui_print_bye();
 
-    return 1;
+    return 0;
 }
 
 
@@ -58,7 +60,7 @@ void command_enter_sql_interactive_env() {
 
             free(sql);
             break;
-        } else{
+        } else {
 
             // UI打印出 sql 查询的结构( 快递模块接收 sql 语句 )
             ui_print_sql_response_data(express_call(sql));

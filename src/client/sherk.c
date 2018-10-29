@@ -1,10 +1,11 @@
 
 #include "module/command/command.h"
+#include "include/define/rescode.h"
 
 int main(int argc, char argv[]) {
 
     // 登录
-    if(!command_login_success(argc, argv)){
+    if(RES_OK != command_login_success(argc, argv)){
 
         // 登录失败
         return 0;

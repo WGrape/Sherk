@@ -4,6 +4,5 @@
 #include "../../include/object/User.h"
 
 extern int certificate_login(User user);
-extern int certificate_logout();
 
 #endif

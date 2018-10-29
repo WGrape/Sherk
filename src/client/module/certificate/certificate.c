@@ -5,21 +5,22 @@
 
 // 凭证模块
 
-// 登录
+/**
+ * 登录
+ * @param user
+ * @return int
+ *
+ */
 int certificate_login(User user){
 
     certificate_print_loadding();
 
     Sleep(2000);
 
-    return 1;
+    // 凭证正确
+    return 0;
 }
 
-// 退出
-int certificate_logout(){
-
-
-}
 
 
 void certificate_print_loadding(){
