@@ -4,13 +4,13 @@
 // #include <netinet/in.h>
 #include <winsock2.h>
 #include "../../include/define/rescode.h"
-
+#include "../../include/define/message.h"
 
 // 网络模块
 
 
 // 打开 network
-void network_open(){
+void network_open() {
 
     // WSA初始化
     WSADATA wsaData;
@@ -32,10 +32,10 @@ int network_socket_connect() {
     server_address.sin_addr.s_addr = inet_addr("127.0.0.1"); // windwos:客户端和服务端都得改,不能只改服务端
 
     //check for error with the connection
-    if(RES_OK != connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address)) ){
+    if (RES_OK != connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address))) {
 
-        printf("Can't connect to sherk server with a socket error : %d \n\n", WSAGetLastError());
-        return 0;
+        printf("%s : %d \n\n", MES_CLIENT_CANNOT_CONNECT_TO_SERVER, WSAGetLastError());
+        return 1;
     }
 
     // receive data from the server
@@ -45,7 +45,7 @@ int network_socket_connect() {
     // print out the server's response
     printf("The server send the data : %s\n", server_response);
 
-    return 1;
+    return 0;
 }
 
 // 关闭 network
@@ -57,3 +57,5 @@ void network_close() {
     // 清理 WSA
     WSACleanup();
 }
+
+
