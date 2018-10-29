@@ -91,6 +91,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
 > * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
 > * [五大常见的MySQL高可用方案](https://zhuanlan.zhihu.com/p/25960208)
+> * [POSIX Threads Programming](https://computing.llnl.gov/tutorials/pthreads/)
 > * [MySQL数据库集群的原理与搭建](https://blog.csdn.net/zhou2s_101216/article/details/50757452)
 > * [聚集索引和非聚集索引（整理）](http://www.cnblogs.com/aspnethot/articles/1504082.html)
 > * [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156?sort=created&page=1) <br/>
