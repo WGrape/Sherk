@@ -3,8 +3,8 @@
 // #include <sys/socket.h>
 // #include <netinet/in.h>
 #include <winsock2.h>
-#include "../../include/define/rescode.h"
-#include "../../include/define/message.h"
+#include "include/define/rescode.h"
+#include "include/define/message.h"
 
 // 网络模块
 

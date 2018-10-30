@@ -3,7 +3,7 @@
 
 // 暴露给外界的接口
 
-#include "../../include/object/User.h"
+#include "include/object/User.h"
 
 extern User ui_print_login_dialog();
 

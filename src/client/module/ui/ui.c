@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
-#include "../../include/define/const.h"
-#include "../../include/object/User.h"
+#include "include/define/const.h"
+#include "include/object/User.h"
 
 // 打印出登录对话框
 User ui_print_login_dialog() {
