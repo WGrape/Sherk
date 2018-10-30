@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../ui/ui.h"
-#include "../certificate/certificate.h"
-#include "../express/express.h"
-#include "../../include/define/rescode.h"
+#include "module/ui/ui.h"
+#include "module/certificate/certificate.h"
+#include "module/express/express.h"
+#include "include/define/rescode.h"
 
 
 // 命令行模块

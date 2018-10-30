@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
-#include "../network/network.h"
-#include "../../include/object/User.h"
+#include "module/network/network.h"
+#include "include/object/User.h"
 
 // 凭证模块
 
