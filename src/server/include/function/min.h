@@ -1,0 +1,6 @@
+#ifndef SERVER_INCLUDE_FUNCTION_MIN_H
+#define SERVER_INCLUDE_FUNCTION_MIN_H
+
+// 返回最小的
+
+#endif

@@ -1,0 +1,6 @@
+#ifndef SERVER_INCLUDE_FUNCTION_LAST_INSERT_ID_H
+#define SERVER_INCLUDE_FUNCTION_LAST_INSERT_ID_H
+
+// 获取到最后一个刚插入的数据的 id
+
+#endif

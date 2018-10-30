@@ -1,0 +1,6 @@
+#ifndef SERVER_INCLUDE_FUNCTION_AVG_H
+#define SERVER_INCLUDE_FUNCTION_AVG_H
+
+// 返回平均值
+
+#endif

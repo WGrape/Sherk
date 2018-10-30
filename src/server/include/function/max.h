@@ -1,0 +1,6 @@
+#ifndef SERVER_INCLUDE_FUNCTION_MAX_H
+#define SERVER_INCLUDE_FUNCTION_MAX_H
+
+// 返回最大的
+
+#endif
