@@ -106,3 +106,4 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [如果有人问你数据库的原理，叫他看这篇文章](http://blog.jobbole.com/100349/)
 > * [Mysql存储引擎InnoDB和MyISAM对比总结](my.oschina.net/cughmy/blog/2221997)
 > * [关于MySQL线程池，这也许是目前最全面的实用帖！](https://dbaplus.cn/news-11-1989-1.html)
+> * [深入MySQL用户自定义变量：使用详解及其使用场景案例](http://blog.ihuxu.com/explaination-of-the-mysql-variables-usage-and-the-use-case/)
