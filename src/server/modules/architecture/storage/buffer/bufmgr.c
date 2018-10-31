@@ -1083,7 +1083,7 @@ BufferAlloc(SMgrRelation smgr, char relpersistence, ForkNumber forkNum,
 		 * condition here, in that someone might dirty it after we released it
 		 * above, or even while we are writing it out (since our share-lock
 		 * won't prevent hint-bit updates).  We will recheck the dirty bit
-		 * after re-locking the buffer header.
+		 * after re-lock the buffer header.
 		 */
 		if (oldFlags & BM_DIRTY)
 		{
@@ -2340,7 +2340,7 @@ BgBufferSync(WritebackContext *wb_context)
  *		pin count 0 and usage count 0.
  *
  * (BUF_WRITTEN could be set in error if FlushBuffers finds the buffer clean
- * after locking it, but we don't care all that much.)
+ * after lock it, but we don't care all that much.)
  *
  * Note: caller must have done ResourceOwnerEnlargeBuffers.
  */
@@ -2837,7 +2837,7 @@ BufferGetLSNAtomic(Buffer buffer)
 	uint32		buf_state;
 
 	/*
-	 * If we don't need locking for correctness, fastpath out.
+	 * If we don't need lock for correctness, fastpath out.
 	 */
 	if (!XLogHintBitIsNeeded() || BufferIsLocal(buffer))
 		return PageGetLSN(page);
@@ -3675,7 +3675,7 @@ LockBufferForCleanup(Buffer buffer)
 		 * anymore, but ProcWaitForSignal() can return for other signals as
 		 * well.  We take care to only reset the flag if we're the waiter, as
 		 * theoretically another backend could have started waiting. That's
-		 * impossible with the current usages due to table level locking, but
+		 * impossible with the current usages due to table level lock, but
 		 * better be safe.
 		 */
 		buf_state = LockBufHdr(bufHdr);
@@ -3984,7 +3984,7 @@ shared_buffer_write_error_callback(void *arg)
 {
 	BufferDesc *bufHdr = (BufferDesc *) arg;
 
-	/* Buffer is pinned, so we can read the tag without locking the spinlock */
+	/* Buffer is pinned, so we can read the tag without lock the spinlock */
 	if (bufHdr != NULL)
 	{
 		char	   *path = relpathperm(bufHdr->tag.rnode, bufHdr->tag.forkNum);

@@ -139,7 +139,7 @@ GetPageWithFreeSpace(Relation rel, Size spaceNeeded)
 /*
  * RecordAndGetPageWithFreeSpace - update info about a page and try again.
  *
- * We provide this combo form to save some locking overhead, compared to
+ * We provide this combo form to save some lock overhead, compared to
  * separate RecordPageWithFreeSpace + GetPageWithFreeSpace calls. There's
  * also some effort to return a page close to the old page; if there's a
  * page with enough free space on the same FSM page where the old one page

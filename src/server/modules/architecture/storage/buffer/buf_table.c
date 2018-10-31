@@ -3,9 +3,9 @@
  * buf_table.c
  *	  routines for mapping BufferTags to buffer indexes.
  *
- * Note: the routines in this file do no locking of their own.  The caller
+ * Note: the routines in this file do no lock of their own.  The caller
  * must hold a suitable lock on the appropriate BufMappingLock, as specified
- * in the comments.  We can't do the locking inside these functions because
+ * in the comments.  We can't do the lock inside these functions because
  * in most cases the caller needs to adjust the buffer header contents
  * before the lock is released (see notes in README).
  *
@@ -54,7 +54,7 @@ InitBufTable(int size)
 {
 	HASHCTL		info;
 
-	/* assume no locking is needed yet */
+	/* assume no lock is needed yet */
 
 	/* BufferTag maps to Buffer */
 	info.keysize = sizeof(BufferTag);
