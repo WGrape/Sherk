@@ -19,10 +19,5 @@ typedef struct {
 
 } Function;
 
-Function function = {
-
-    AVG, LAST_INSERT_ID, MAX, MIN
-};
-
 
 #endif

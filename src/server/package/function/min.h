@@ -2,8 +2,10 @@
 #define SERVER_PACKAGE_FUNCTION_MIN_H
 
 // 返回最小的
-static int MIN(){
+int MIN(){
 
 }
 
 #endif
+
+

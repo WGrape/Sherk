@@ -2,7 +2,7 @@
 #define SERVER_PACKAGE_FUNCTION_LAST_INSERT_ID_H
 
 // 获取到最后一个刚插入的数据的 id
-static int LAST_INSERT_ID(){
+int LAST_INSERT_ID(){
 
 
 }

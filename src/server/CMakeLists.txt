@@ -14,6 +14,7 @@ add_library(Threads::Threads INTERFACE IMPORTED)
 # sherkd表示编译后的可执行文件名为 sherkd
 set(INCLUDE_DIR ./include)
 set(MODULE_DIR ./module)
+
 #add_executable(sherkd ./sherkd.c
 #
 #        ${INCLUDE_DIR}/define/const.h
@@ -28,7 +29,7 @@ set(MODULE_DIR ./module)
 #
 #        package/package.h package/algorithm/algorithm.h)
 
-add_executable(sherkd ./sherkd.c)
+add_executable(sherkd ./sherkd.c module/architecture/engine/index/index.h)
 
 # 由于用到了线程, 所以需要此配置
 target_link_libraries(sherkd pthread)
