@@ -8,7 +8,6 @@ int main(void) {
 
     if(RES_OK != init_startup_success() ){
 
-        // 启动失败
         return 1;
     }
 
