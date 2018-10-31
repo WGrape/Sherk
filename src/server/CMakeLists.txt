@@ -4,11 +4,7 @@ project(Sherk C)
 set(CMAKE_C_STANDARD 99)
 
 # 使用此配置头文件，头文件不用再写成 "../../../" 这样丑陋的路径了
-set(KERNEL_ROOT "../../../Sherk")
-include_directories(
-
-        "${KERNEL_ROOT}/src/server"
-)
+include_directories(../server)
 
 # 由于用到了线程, 所以需要此配置
 set(THREADS_PREFER_PTHREAD_FLAG ON)
