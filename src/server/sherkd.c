@@ -1,18 +1,16 @@
 #include <stdio.h>
-#include <unistd.h>
-#include <pthread.h>
-#include <semaphore.h>
+#include <module/init/init.h>
+#include "include/define/rescode.h"
+
+
 
 int main(void) {
 
-   
-    // 线程处理
+    if(RES_OK != init_startup_success() ){
 
-
-    // 连接池处理
-
-
-    // 所有请求的 sql 存放到队列中
+        // 启动失败
+        return 1;
+    }
 
 
 

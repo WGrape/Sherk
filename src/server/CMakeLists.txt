@@ -10,8 +10,23 @@ include_directories(../server)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 add_library(Threads::Threads INTERFACE IMPORTED)
 
+
 # sherkd表示编译后的可执行文件名为 sherkd
-add_executable(sherkd ./sherkd.c modules/architecture/engine/innodb.c modules/architecture/engine/isam.c)
+set(INCLUDE_DIR ./include)
+set(MODULE_DIR ./module)
+add_executable(sherkd ./sherkd.c
+
+        ${INCLUDE_DIR}/define/const.h
+        ${INCLUDE_DIR}/define/message.h
+        ${INCLUDE_DIR}/define/rescode.h
+
+        ${INCLUDE_DIR}/init/read_cnf.h
+
+        ${MODULE_DIR}/init/init.h
+        ${MODULE_DIR}/init/init.c
+
+
+        package/package.h package/algorithm/algorithm.h)
 
 
 # 由于用到了线程, 所以需要此配置

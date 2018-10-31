@@ -1,0 +1,7 @@
+#ifndef SERVER_INCLUDE_DEFINE_MESSAGE_H
+#define SERVER_INCLUDE_DEFINE_MESSAGE_H
+
+// 消息
+
+
+#endif
