@@ -11,7 +11,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 add_library(Threads::Threads INTERFACE IMPORTED)
 
 # sherkd表示编译后的可执行文件名为 sherkd
-add_executable(sherkd ./sherkd.c modules/architecture/engine/innodb.c)
+add_executable(sherkd ./sherkd.c modules/architecture/engine/innodb.c modules/architecture/engine/isam.c)
 
 
 # 由于用到了线程, 所以需要此配置

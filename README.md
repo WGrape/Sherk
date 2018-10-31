@@ -86,12 +86,13 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [创建数据库集群](https://docs.huihoo.com/postgresql/pgsqldoc-7.1C/creating-cluster.html)
 > * [MYSQL的编码问题](https://blog.csdn.net/martinkro/article/details/5352474)
 > * [github postgres](https://github.com/postgres/postgres)
-> * ####### [数据库内核月报](http://mysql.taobao.org/monthly/)
+> * ##### [数据库内核月报](http://mysql.taobao.org/monthly/)
 > * [postgresql官网](https://www.postgresql.org/)<br/>
 > * [MySQL字符集详解](https://www.cnblogs.com/wcwen1990/p/6917109.html)
 > * [mysql数据库引擎](https://www.cnblogs.com/0201zcr/p/5296843.html)
 > * [数据库集群技术漫谈](http://www.cnblogs.com/CareySon/p/3627594.html)
 > * [ORACLE博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
+> * [数据库事务处理的艺术](http://item.jd.com/12270612.html?dist=jd)
 > * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
 > * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
 > * [MySql数据库连接池专题](https://www.cnblogs.com/aspirant/p/6747238.html)
