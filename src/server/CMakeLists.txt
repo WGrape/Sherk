@@ -29,7 +29,7 @@ set(MODULE_DIR ./module)
 #
 #        package/package.h package/algorithm/algorithm.h)
 
-add_executable(sherkd ./sherkd.c module/architecture/engine/index/index.h)
+add_executable(sherkd ./sherkd.c module/architecture/engine/index/index.h module/architecture/engine/integrity/integrity.h module/architecture/engine/integrity/trigger/trigger.h module/architecture/engine/integrity/trigger/trigger.c module/architecture/engine/integrity/assertion/assertion.h module/architecture/engine/view/view.h module/architecture/engine/security/encrypt/encrypt.h package/audit/audit.h)
 
 # 由于用到了线程, 所以需要此配置
 target_link_libraries(sherkd pthread)

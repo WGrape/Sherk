@@ -1,0 +1,4 @@
+#ifndef INTEGRITY_ASSERTION_H
+#define INTEGRITY_ASSERTION_H
+
+#endif
