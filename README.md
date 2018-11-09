@@ -94,11 +94,13 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [ORACLE博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
 > * [数据库事务处理的艺术](http://item.jd.com/12270612.html?dist=jd)
 > * [Mysql Innodb 中的锁](https://zhuanlan.zhihu.com/p/31875702)
+> * [MySQL的复制原理及配置](https://www.cnblogs.com/funsion/p/4017798.html)
 > * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
 > * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
 > * [MySql数据库连接池专题](https://www.cnblogs.com/aspirant/p/6747238.html)
 > * [MySQL Documentation](https://dev.mysql.com/doc/)> * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
 > * [mysql引擎inodb与isam ?](https://bbs.csdn.net/topics/350065838)
+> * [MySQL Partition分区扫盲](https://www.cnblogs.com/funsion/p/4017794.html)
 > * [五大常见的MySQL高可用方案](https://zhuanlan.zhihu.com/p/25960208)
 > * [InnoDB主要特性、概念和架构](https://blog.csdn.net/qq_28674045/article/details/51721575)
 > * [POSIX Threads Programming](https://computing.llnl.gov/tutorials/pthreads/)
