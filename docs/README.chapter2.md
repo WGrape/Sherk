@@ -79,6 +79,7 @@
 - [3.1 概述](#article-3.1)
 - [3.2 非关系型数据库的特点](#article-3.2)
 - [3.3 常用的非关系型数据库](#article-3.3)
+- [3.4 更多内容](#article-3.4)
 
 ## 4. <span id="article-chapter-4">深入理解关系型数据库系统</span>
 
@@ -404,6 +405,9 @@
     5.&nbsp;异步复制<br/>
 
 - ### <span id="article-3.3">3.3 常用的非关系型数据库</span>
+
+- ### <span id="article-3.4">3.4 更多内容</span>
+    更多详细关于非关系型数据库的理论讲解请看 [《非关系型数据库系统的基础理论》](https://github.com/Lvsi-China/CSTheory/blob/master/docs/nosql.md)
 
 <br/>
 
