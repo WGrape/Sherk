@@ -81,6 +81,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 ## ✍ 参考（Reference ）
 > * [维基百科](https://www.wikipedia.org/)
+> * [并发控制](https://zh.wikipedia.org/wiki/Category:%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6)
 > * [数据库集群](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E7%BE%A4)
 > * [sql优化专栏](https://dbaplus.cn/news-155-1.html)
 > * [创建数据库集群](https://docs.huihoo.com/postgresql/pgsqldoc-7.1C/creating-cluster.html)
