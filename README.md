@@ -79,7 +79,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 <br>
 
-## ✍ 参考（Reference ）
+## <span id="article-reference">✍ 参考（Reference ）</span>
 > * [维基百科](https://www.wikipedia.org/)
 > * [并发控制](https://zh.wikipedia.org/wiki/Category:%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6)
 > * [数据库集群](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E7%BE%A4)
@@ -89,9 +89,11 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [MYSQL的编码问题](https://blog.csdn.net/martinkro/article/details/5352474)
 > * [github postgres](https://github.com/postgres/postgres)
 > * [数据库内核月报](http://mysql.taobao.org/monthly/)
-> * [postgresql官网](https://www.postgresql.org/)<br/>
+> * [postgresql官网](https://www.postgresql.org/)
+> * [MySQL架构及历史](https://www.jianshu.com/p/1f17a496f14e)
 > * [MySQL字符集详解](https://www.cnblogs.com/wcwen1990/p/6917109.html)
 > * [mysql数据库引擎](https://www.cnblogs.com/0201zcr/p/5296843.html)
+> * [MySQL三层逻辑架构](https://segmentfault.com/a/1190000010681611)
 > * [数据库集群技术漫谈](http://www.cnblogs.com/CareySon/p/3627594.html)
 > * [ORACLE博客文章目录](http://www.cnblogs.com/kerrycode/p/3256266.html)
 > * [php-zephir-parser](https://github.com/phalcon/php-zephir-parser)
@@ -102,8 +104,10 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [MySQL有哪些索引类型 ?](https://segmentfault.com/q/1010000003832312)
 > * [数据库系统概论 - 王珊](https://www.baidu.com/s?ie=UTF-8&wd=数据库系统概论-王珊) <br/>
 > * [MySql数据库连接池专题](https://www.cnblogs.com/aspirant/p/6747238.html)
-> * [MySQL Documentation](https://dev.mysql.com/doc/)> * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
+> * [MySQL Documentation](https://dev.mysql.com/doc/)
+> * [浅析开源数据库MySQL架构](https://segmentfault.com/a/1190000011133778)
 > * [mysql引擎inodb与isam ?](https://bbs.csdn.net/topics/350065838)
+> * [MySQL 架构组成—存储引擎](https://yq.aliyun.com/articles/497881)
 > * [RDS 最佳实践 - 阿里巴巴](https://img.alicdn.com/top/i1/T10tl.FetdXXaRvVjX.pdf)
 > * [MySQL Partition分区扫盲](https://www.cnblogs.com/funsion/p/4017794.html)
 > * [五大常见的MySQL高可用方案](https://zhuanlan.zhihu.com/p/25960208)
@@ -116,6 +120,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [如何自己实现一个关系型数据库？](https://www.zhihu.com/question/38870156?sort=created&page=1) <br/>
 > * [浅谈高性能数据库集群——读写分离](https://juejin.im/post/5b3b491a6fb9a04f8751dff4)
 > * [数据库集群主从架构查询功能设计](https://segmentfault.com/a/1190000008515715)
+> * [数据库预编译为何能防止SQL注入？](https://www.zhihu.com/question/43581628)
 > * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
 > * [浅谈数据库并发控制 - 锁和 MVCC](https://draveness.me/database-concurrency-control)
 > * [基于MySQL的数据库集群系统的实现](https://www.ibm.com/developerworks/cn/linux/database/mysql-ha/index.html)
