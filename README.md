@@ -123,6 +123,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [数据库预编译为何能防止SQL注入？](https://www.zhihu.com/question/43581628)
 > * [MySQL索引的分类（根据数据结构）](https://my.oschina.net/xinxingegeya/blog/308383)
 > * [浅谈数据库并发控制 - 锁和 MVCC](https://draveness.me/database-concurrency-control)
+> * [收集一些常见的 MySQL 死锁案例](https://github.com/aneasystone/mysql-deadlocks)
 > * [基于MySQL的数据库集群系统的实现](https://www.ibm.com/developerworks/cn/linux/database/mysql-ha/index.html)
 > * [The Illustrated TLS Connection](https://tls.ulfheim.net/)
 > * [深入理解Mysql——锁、事务与并发控制](https://blog.csdn.net/lemon89/article/details/51477497)
