@@ -1,44 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
+#include <ncurses.h>
 #include "include/define/const.h"
 #include "include/object/User.h"
+#include <termios.h>
+# include<unistd.h>
 
-// 打印出登录对话框
-User ui_print_login_dialog() {
-
-    char name[30];
-    char password[30];
-
-    while (1) {
-
-        // 输入用户名
-        printf("Please input your name : ");
-        scanf("%s", name);
-
-        // 吃掉回车
-        getchar();
-
-        // 安全显示输入的密码
-        printf("Please input your password : ");
-        ui_password_input_safely(password);
-
-        // 判断用户名和密码是否合法
-        int len1 = strlen(name), len2 = strlen(password);
-        if (len1 < 5 || len1 > 20 || len2 < 5 || len2 > 20) {
-
-            printf("Your name or password is not valid\n");
-        } else {
-
-            break;
-        }
-    }
-
-    User user = {name, password};
-
-    return user;
-}
 
 // 登录成功时，打印欢迎语
 void ui_print_welcome() {
@@ -56,41 +24,48 @@ void ui_print_illegal_input() {
 void ui_print_wait_for_input(char *sql) {
 
     printf("sherk > ");
-    gets(sql);
+
+    char segment[100];segment[0]=' ';
+
+    int empty_buffer = 1;
+
+    while( empty_buffer || '\n' != getchar()){
+
+        scanf("%s", &segment[1]);
+
+        if(empty_buffer){
+
+            strcpy(sql, &segment[1]);
+        }else{
+
+            strcat(sql, segment);
+        }
+
+        memset(segment,'\0',100);
+        segment[0]=' ';
+
+        empty_buffer = 0;
+    }
+
 }
 
 // 安全的输入密码
-void ui_password_input_safely(char *password) {
+char* ui_password_input_safely(char *password) {
 
-    char c;
-    for (int i = 0;;) {
+    struct termios old, new;//old保存当前的终端参数，new用来保存修改后的终端参数
+    tcgetattr(0, &old);//将tcgetattr()获取到的stdin（标准输入流）的参数存到old中
+    new = old;//将该参数复制一份到new中
+    new.c_lflag &= ~( ECHO | ICANON);//修改new中的ECHO和ICANON参数，使得new为不回显输入内容
+    tcsetattr(0,  TCSANOW ,&new);//将修改后的new设置为stdin的新的参数，并立即生效
 
-        c = getch();
+    memset(password, 0, 20);//每次重新输入以前都要清空一次buf
+    fgets(password, 20, stdin);
 
-        // 如果是删除键
-        if ((int) (c) == 8) {
+    tcsetattr(0, TCSANOW, &old);//登陆成功后恢复原有终端参数，正常回显
 
-            if (i > 0) {
+    printf("\n");
 
-                i = i - 1;
-                printf("\b \b");
-            }
-        }
-            // 如果是回车键
-        else if (c == '\n' || c == '\r') {
-
-            password[i] = '\0';
-            putchar('\n');
-            break;
-        }
-            // 不是删除键也不是回车键，则输出星号
-        else {
-
-            password[i] = c;
-            putch('*');
-            ++i;
-        }
-    }
+    return password;
 }
 
 // 打印出 logo
@@ -116,21 +91,61 @@ void ui_print_logo() {
 }
 
 // 退出成功时，打印再见语
-void ui_print_bye(){
+void ui_print_bye() {
 
     printf("Thanks for using sherk!\n");
 }
 
 // 打印出账号不存在
-void ui_print_account_not_exist(){
+void ui_print_account_not_exist() {
 
     printf("Account not esist!\n");
 }
 
 // 打印出sql响应的数据
-void ui_print_sql_response_data(char *s){
+void ui_print_sql_response_data(char *s) {
 
-    printf("%s\n",s);
+    printf("%s\n", s);
 }
 
 
+// 打印出登录对话框
+User ui_print_login_dialog() {
+
+    char name[30];
+    char password[30];
+
+    int times=1;
+    while (1) {
+
+        // 输入用户名
+        printf("Please enter your name : ");
+        scanf("%s", name);
+        getchar();
+
+        // 安全显示输入的密码
+        printf("Please enter your password : ");
+        ui_password_input_safely(password);
+
+        // 判断用此账户是否存在
+        if(1){
+
+            printf("\n");
+            break;
+        }
+
+        if(times>=3){
+
+            ui_print_account_not_exist();
+            exit(0);
+        }
+
+        ++times;
+    }
+
+    User user = {name, password};
+
+    // printf( "此用户的信息是, 用户名: %s , 密码: %s", user.name, user.password );
+
+    return user;
+}

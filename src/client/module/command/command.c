@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "module/ui/ui.h"
 #include "module/certificate/certificate.h"
 #include "module/express/express.h"
 #include "include/define/rescode.h"
-
+#include "include/define/exitcode.h"
+#include "include/helper/string.h"
 
 // 命令行模块
 
@@ -13,7 +15,7 @@
 int command_login_success(int argc, char **argv) {
 
     // 是登录命令
-    if (argc > 1 && strcmp(strlwr(argv[0]), "sherk") == 0 && strcmp(strlwr(argv[1]), "login") == 0) {
+    if (argc > 2 && strcmp(strtolower(argv[1]), "sherk") == 0 && strcmp(strtolower(argv[2]), "login") == 0) {
 
         // 凭证正确
         if (RES_OK == certificate_login(ui_print_login_dialog())) {
@@ -38,7 +40,14 @@ int command_login_success(int argc, char **argv) {
 }
 
 // 判断是否退出成功
-int command_logout_success() {
+int command_logout_success(int exitCode) {
+
+    if(EXIT_NATURAL == exitCode){
+
+        // 如果是正常退出, 则做清理回收操作
+
+    }
+
 
     ui_print_bye();
 
@@ -54,6 +63,8 @@ void command_enter_sql_interactive_env() {
         // UI打印出等待输出的状态
         char *sql = (char *) (malloc(sizeof(char) * 100000));
         ui_print_wait_for_input(sql);
+
+        printf("%s", sql);
 
         // 输入的sql为退出语句
         if (strcmp(sql, "sherk exit") == 0 || strcmp(sql, "sherk logout") == 0) {

@@ -17,7 +17,16 @@ char* express_transport_sql(char *sql){
 // 打电话给快递公司并把sql给快递公司
 char* express_call(char *sql){
 
-    return express_transport_sql(sql);
+    // 获取到原始的响应数据
+    char *raw = express_transport_sql(sql);
+
+
+    // 对原始数据进行加工
+
+    char *res;
+
+
+    return res;
 }
 
 

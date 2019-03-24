@@ -1,21 +1,13 @@
 #include <stdio.h>
 #include <sys/types.h>
-// #include <sys/socket.h>
-// #include <netinet/in.h>
-#include <winsock2.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
 #include "include/define/rescode.h"
 #include "include/define/message.h"
 
 // 网络模块
 
-
-// 打开 network
-void network_open() {
-
-    // WSA初始化
-    WSADATA wsaData;
-    WSAStartup(MAKEWORD(2, 2), &wsaData);
-}
 
 // 连接
 int network_socket_connect() {
@@ -34,7 +26,7 @@ int network_socket_connect() {
     //check for error with the connection
     if (RES_OK != connect(network_socket, (struct sockaddr *) &server_address, sizeof(server_address))) {
 
-        printf("%s : %d \n\n", MES_CLIENT_CANNOT_CONNECT_TO_SERVER, WSAGetLastError());
+        printf("%s : \n\n", MES_CLIENT_CANNOT_CONNECT_TO_SERVER);
         return 1;
     }
 
@@ -48,14 +40,5 @@ int network_socket_connect() {
     return 0;
 }
 
-// 关闭 network
-void network_close() {
-
-    // and then close the socket
-    closesocket(socket);
-
-    // 清理 WSA
-    WSACleanup();
-}
 
 

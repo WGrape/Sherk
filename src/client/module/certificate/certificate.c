@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include <windows.h>
+#include<unistd.h>
 #include "module/network/network.h"
 #include "include/object/User.h"
+
+void certificate_print_loadding();
 
 // 凭证模块
 
@@ -15,7 +17,7 @@ int certificate_login(User user){
 
     certificate_print_loadding();
 
-    Sleep(2000);
+    sleep(2);
 
     // 凭证正确
     return 0;

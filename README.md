@@ -135,3 +135,99 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 > * [关于MySQL线程池，这也许是目前最全面的实用帖！](https://dbaplus.cn/news-11-1989-1.html)
 > * [深入MySQL用户自定义变量：使用详解及其使用场景案例](http://blog.ihuxu.com/explaination-of-the-mysql-variables-usage-and-the-use-case/)
 > * [Step by Step：Linux C多线程编程入门(基本API及多线程的同步与互斥)](https://www.cnblogs.com/fuyunbiyi/p/3475602.html)
+> * [SQL is 43 years old - here’s 8 reasons we still use it today](https://blog.sqlizer.io/posts/sql-43/) [译版](http://www.codeceo.com/article/why-we-use-43-years-old-sql.html)
+> * [数据库管理系统（DBMS）](https://zh.wikipedia.org/wiki/%E8%A7%86%E5%9B%BE)
+> * [关于MySQL的知识点](https://juejin.im/post/5b24cf7e51882574c020bd56)
+> * [简书-数据库系统原理](https://www.jianshu.com/nb/29394824)
+> * [关系键](https://zh.wikipedia.org/wiki/%E5%85%B3%E7%B3%BB%E9%94%AE)
+> * [数据库系统原理之关系代数](https://www.jianshu.com/p/18baf091571a)
+> * [（整理）关系型数据库基本知识点](https://blog.csdn.net/back_to_dream/article/details/51302388)
+
+> * [mysql之mysql数据在磁盘的储存方式](https://blog.51cto.com/ggvylf/1679322)
+> * [MySQL探秘(四):InnoDB的磁盘文件及落盘机制](https://juejin.im/post/5b94884af265da0ae74f60d3)
+> * [深入理解 MySQL 底层实现](https://gitbook.cn/books/5a1f71e0e04cfd1c75f4ec84/index.html)
+
+> * [深入理解数据库磁盘存储（Disk Storage）](https://blog.csdn.net/idber/article/details/8087473)
+
+> * [数据库内部存储结构探索](https://juejin.im/post/5b66b01bf265da0f4861369d)
+
+> * [MYSQL-B+TREE索引原理](https://www.jianshu.com/p/486a514b0ded)
+
+> * [简书 - mysql专题](https://www.jianshu.com/nb/17438102)
+
+> * [学无止境 - 高性能MySQL读书笔记](https://segmentfault.com/blog/whaleszhong)
+
+
+> * [超详细MySQL高性能优化实战总结！](https://zhuanlan.zhihu.com/p/46647057)
+> * [mysql体系结构和sql查询执行过程简析](https://www.cnblogs.com/starlion/p/9119798.html)
+
+
+> * [初相识 | 全方位认识 sys 系统库](http://blog.woqutech.com/2018/07/27/%E5%88%9D%E7%9B%B8%E8%AF%86-%E5%85%A8%E6%96%B9%E4%BD%8D%E8%AE%A4%E8%AF%86-sys-%E7%B3%BB%E7%BB%9F%E5%BA%93-2/)
+
+
+> * [沃趣:让客户用上最好的数据库技术(数据库技术分享)](http://blog.woqutech.com/)
+
+> * [为什么 MySQL 使用多线程，而 Oracle 和 PostgreSQL 使用多进程？](https://www.zhihu.com/question/20303558)
+
+> * [Oracle官方博客-技术分享](https://blogs.oracle.com/database4cn/%E6%8A%80%E6%9C%AF%E5%85%B1%E4%BA%AB)
+
+> * [一条SQL语句究竟会产生多少个并行进程？](https://blogs.oracle.com/database4cn/sql-v2)
+
+> * [msyql四种启动方式](https://blog.51cto.com/darrenmemos/1874757)
+
+> * [mysqld_safe](https://www.jianshu.com/p/2f4ef40020aa)
+
+
+> * [What does mysqld_safe do in my.cnf?](https://stackoverflow.com/questions/16873118/what-does-mysqld-safe-do-in-my-cnf)
+
+> * [mysqld_safe — MySQL Server Startup Script](https://docs.oracle.com/cd/E17952_01/mysql-5.0-en/mysqld-safe.html)
+
+> * [Mysql数据库日报](https://www.kancloud.cn/taobaomysql/monthly)
+
+
+> * [MySQL学习之路（八）：MySQL中的数据结构和算法](https://blog.csdn.net/lengyuhong/article/details/5967103)
+
+
+> * [现代存储系统背后的算法](https://infoq.cn/article/algorithms-behind-modern-storage-systems)
+
+
+> * [mysql索引背后的数据结构](https://www.google.com/search?q=mysql索引背后的数据结构)
+
+> * [mysql深入学习笔记及实战指南](http://www.notedeep.com/note/38)
+> * [数据库系统的实现](https://www.cnblogs.com/muchen/p/5291325.html)
+
+> * [关系型数据库发展演义](http://www.eygle.com/digest/2007/09/relation_of_rdbms.html)
+
+> * [从IO看数据库底层实现原理](https://blog.csdn.net/youling_lh/article/details/10866883)
+
+> * [谓词逻辑](http://www.ituring.com.cn/book/tupubarticle/5516)
+
+> * [如何理解计算机科学相关里出现的“谓词”？](https://www.zhihu.com/question/28698429)
+
+> * [关系数据模型](http://www.ituring.com.cn/book/tupubarticle/5510)
+
+> * [数据模型](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B)
+
+> * [关系数据库中12条准则的数学定义](https://blog.csdn.net/xrt95050/article/details/6012537)
+
+> * [关系数据库中12条准则的数学定义2](http://blog.sina.com.cn/s/blog_686560570100sxv7.html)
+
+> * [联机事务处理](https://baike.baidu.com/item/%E8%81%94%E6%9C%BA%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86)
+
+
+> * [数据库技术的发展简史](https://www.cnblogs.com/feng9exe/p/7419336.html)
+
+> * [INFORMIX-ONLINE动态服务器多线索结构](http://blog.itpub.net/31486061/viewspace-2149827/)
+
+> * [INFORMIX ONLINE服务器](http://www.xici.net/d91123.htm)
+> * [Informix－Online数据库的查询优化策略](http://blog.chinaunix.net/uid-10951-id-1762509.html)
+> * [Informix OnLine磁盘数据结构](https://www.jianshu.com/p/18adf30913e8)
+
+> * [推荐:『浅入浅出』MySQL 和 InnoDB](https://draveness.me/mysql-innodb)
+
+> * [为什么大家都不推荐使用MySQL触发器而用存储过程？](https://segmentfault.com/q/1010000004907411)
+
+> * [MySQL误操作后如何快速回滚](https://www.jianshu.com/p/4b71eb2de1ba)
+> * [What are MySQL triggers and how to use them?](https://www.siteground.com/kb/mysql-triggers-use/)
+
+

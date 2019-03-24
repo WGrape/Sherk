@@ -1,7 +1,7 @@
 #include "module/command/command.h"
 #include "include/define/rescode.h"
 
-int main(int argc, char argv[]) {
+int main(int argc, char** argv) {
 
     // 登录
     if(RES_OK != command_login_success(argc, argv)){
