@@ -29,13 +29,29 @@ void ui_print_wait_for_input(char *sql) {
 
     int empty_buffer = 1;
 
+    // 处理回车键问题(不断敲回车时，就不断的换行)
+    while(1){
+
+        char ch = (char)getchar();
+
+        if('\n' == ch){
+
+            printf("sherk > ");
+        }else{
+
+            strcat(sql, &ch);
+            break;
+        }
+    }
+
+    // 解决命令中有空格的问题
     while( empty_buffer || '\n' != getchar()){
 
         scanf("%s", &segment[1]);
 
         if(empty_buffer){
 
-            strcpy(sql, &segment[1]);
+            strcat(sql, &segment[1]);
         }else{
 
             strcat(sql, segment);
@@ -46,7 +62,7 @@ void ui_print_wait_for_input(char *sql) {
 
         empty_buffer = 0;
     }
-
+    // printf("%s\n",sql);
 }
 
 // 安全的输入密码

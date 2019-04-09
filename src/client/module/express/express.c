@@ -22,11 +22,10 @@ char* express_call(char *sql){
 
 
     // 对原始数据进行加工
-
     char *res;
 
 
-    return res;
+    return raw;
 }
 
 

@@ -1,6 +1,0 @@
-#ifndef PACKAGE_DICTIONARY_H
-#define PACKAGE_DICTIONARY_H
-
-
-
-#endif

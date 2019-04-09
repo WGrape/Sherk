@@ -1,13 +1,9 @@
 #include <stdio.h>
-#include <module/init/init.h>
-#include "include/define/rescode.h"
+#include <SherkLaunch/src/sherkLaunch.h>
 
-int main(void) {
+int main(){
 
-    if(RES_OK != init_startup_success() ){
-
-        return 1;
-    }
+    sherkLaunch_start();
 
     return 0;
 }

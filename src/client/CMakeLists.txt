@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1.0)
-project(Sherk C)
+project(SherkClient C)
 
 set(CMAKE_C_STANDARD 99)
 
@@ -22,6 +22,9 @@ add_executable(sherk ./sherk.c
         ${INCLUDE_DIR}/object/SocketResponseData.h
         ${INCLUDE_DIR}/object/User.h
 
+        ${INCLUDE_DIR}/helper/color.h
+        ${INCLUDE_DIR}/helper/console.h
+        ${INCLUDE_DIR}/helper/exit.h
         ${INCLUDE_DIR}/helper/string.h
 
         ${MODULE_DIR}/certificate/certificate.c

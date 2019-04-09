@@ -1,50 +1,54 @@
 ﻿cmake_minimum_required(VERSION 3.1.0)
-project(Sherk C)
+project(sherkd C)
 
 set(CMAKE_C_STANDARD 99)
 
 # 使用此配置头文件，头文件不用再写成 "../../../" 这样丑陋的路径了
 include_directories(../server)
 
-# 由于用到了线程, 所以需要此配置
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-add_library(Threads::Threads INTERFACE IMPORTED)
+# file(GLOB_RECURSE c_source_list "../server/*.c")
+# file(GLOB_RECURSE h_source_list "../server/*.h")
+# add_executable(sherkd ${c_source_list} ${h_source_list})
 
 
-# sherkd表示编译后的可执行文件名为 sherkd
-set(INCLUDE_DIR ./include)
-set(MODULE_DIR ./module)
+file(GLOB_RECURSE source_list_sherkEngine_h "./SherkEngine/*.h")
+file(GLOB_RECURSE source_list_sherkLaunch_h "./SherkLaunch/*.h")
+file(GLOB_RECURSE source_list_sherkLink_h "./SherkLink/*.h")
+file(GLOB_RECURSE source_list_sherkMechanism_h "./SherkMechanism/*.h")
+file(GLOB_RECURSE source_list_sherkSQL_h "./SherkSQL/*.h")
+file(GLOB_RECURSE source_list_sherkStorage_h "./SherkStorage/*.h")
+file(GLOB_RECURSE source_list_sherkSupport_h "./SherkSupport/*.h")
+file(GLOB_RECURSE source_list_sherkSystem_h "./SherkSystem/*.h")
 
-#add_executable(sherkd ./sherkd.c
-#
-#        ${INCLUDE_DIR}/define/const.h
-#        ${INCLUDE_DIR}/define/message.h
-#        ${INCLUDE_DIR}/define/rescode.h
-#
-#        ${INCLUDE_DIR}/init/read_cnf.h
-#
-#        ${MODULE_DIR}/init/init.h
-#        ${MODULE_DIR}/init/init.c
-#
-#
-#        package/package.h package/algorithm/algorithm.h)
+file(GLOB_RECURSE source_list_sherkEngine_c "./SherkEngine/*.c")
+file(GLOB_RECURSE source_list_sherkLaunch_c "./SherkLaunch/*.c")
+file(GLOB_RECURSE source_list_sherkLink_c "./SherkLink/*.c")
+file(GLOB_RECURSE source_list_sherkMechanism_c "./SherkMechanism/*.c")
+file(GLOB_RECURSE source_list_sherkSQL_c "./SherkSQL/*.c")
+file(GLOB_RECURSE source_list_sherkStorage_c "./SherkStorage/*.c")
+file(GLOB_RECURSE source_list_sherkSupport_c "./SherkSupport/*.c")
+file(GLOB_RECURSE source_list_sherkSystem_c "./SherkSystem/*.c")
 
 add_executable(sherkd ./sherkd.c
 
-        module/architecture/engine/index/index.h
-        module/architecture/engine/integrity/integrity.h
-        module/architecture/engine/integrity/trigger/trigger.h
-        module/architecture/engine/integrity/trigger/trigger.c
-        module/architecture/engine/integrity/assertion/assertion.h
-        module/architecture/engine/view/view.h
-        # module/architecture/engine/security/encrypt/encrypt.h
-        module/architecture/security/audit/audit.h
-        module/architecture/system/variable/variable.h
+        ${source_list_sherkEngine_h}
+        ${source_list_sherkLaunch_h}
+        ${source_list_sherkLink_h}
+        ${source_list_sherkMechanism_h}
+        ${source_list_sherkSQL_h}
+        ${source_list_sherkStorage_h}
+        ${source_list_sherkSupport_h}
+        ${source_list_sherkSystem_h}
 
-        module/architecture/system/variable/variable.c
-        module/link/thread/thread.h
-        package/dictionary/dictionary.h
-        package/dictionary/dictionary.c
+
+        ${source_list_sherkEngine_c}
+        ${source_list_sherkLaunch_c}
+        ${source_list_sherkLink_c}
+        ${source_list_sherkMechanism_c}
+        ${source_list_sherkSQL_c}
+        ${source_list_sherkStorage_c}
+        ${source_list_sherkSupport_c}
+        ${source_list_sherkSystem_c}
 
         )
 
