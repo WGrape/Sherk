@@ -19,6 +19,6 @@ extern void ui_print_bye();
 
 extern void ui_print_account_not_exist();
 
-extern void ui_print_sql_response_data(char *s);
+extern void ui_print_sql_response_data(char *buffer);
 
 #endif

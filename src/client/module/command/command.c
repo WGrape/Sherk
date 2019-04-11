@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <include/define/const.h>
 #include "module/ui/ui.h"
 #include "module/certificate/certificate.h"
 #include "module/express/express.h"
@@ -42,7 +43,7 @@ int command_login_success(int argc, char **argv) {
 // 判断是否退出成功
 int command_logout_success(int exitCode) {
 
-    if(EXIT_NATURAL == exitCode){
+    if (EXIT_NATURAL == exitCode) {
 
         // 如果是正常退出, 则做清理回收操作
 
@@ -57,23 +58,25 @@ int command_logout_success(int exitCode) {
 // 进入sql交互环境
 void command_enter_sql_interactive_env() {
 
+    char sql[CONST_SQL_SIZE], buffer[CONST_BUFFER_SIZE];
+
     while (1) {
 
-        // UI打印出等待输出的状态
-        char *sql = (char *) (malloc(sizeof(char) * 100000));
+        memset(sql, '\0', sizeof(char) * CONST_SQL_SIZE);
+        memset(buffer, '\0', sizeof(char) * CONST_BUFFER_SIZE);
+
+        // UI打印出等待输出的状态, sql最短为2个字符
         ui_print_wait_for_input(sql);
 
         // 输入的sql为退出语句
         if (strcmp(sql, "sherk exit") == 0 || strcmp(sql, "sherk logout") == 0) {
 
-            free(sql);
             break;
         } else {
 
             // UI打印出 sql 查询的结构( 快递模块接收 sql 语句 )
-            ui_print_sql_response_data(express_call(sql));
-
-            free(sql);
+            express_transport_sql(sql, buffer);
+            ui_print_sql_response_data(buffer);
         }
     }
 

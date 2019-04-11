@@ -7,4 +7,10 @@
 #define CONST_PASSWORD_MIN_LEN 5
 #define CONST_PASSWORD_MAX_LEN 20
 
+
+
+// 传输的SQL最大长度和接收服务端响应的缓冲区长度
+#define CONST_BUFFER_SIZE 100000
+#define CONST_SQL_SIZE 100000
+
 #endif
