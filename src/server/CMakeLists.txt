@@ -2,6 +2,7 @@
 project(sherkd C)
 
 set(CMAKE_C_STANDARD 99)
+SET(CMAKE_C_FLAGS "-lconfig")
 
 # 使用此配置头文件，头文件不用再写成 "../../../" 这样丑陋的路径了
 include_directories(../server)
