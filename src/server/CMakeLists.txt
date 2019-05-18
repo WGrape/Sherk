@@ -1,8 +1,13 @@
 ﻿cmake_minimum_required(VERSION 3.1.0)
 project(sherkd C)
 
-set(CMAKE_C_STANDARD 99)
+SET(CMAKE_C_STANDARD 99)
 SET(CMAKE_C_FLAGS "-lconfig")
+SET(CMAKE_C_FLAGS_DEBUG "-lmsgpackc")
+# SET(CMAKE_C_FLAGS "-lmsgpackc") # 这样写就会报错 : https://stackoverflow.com/questions/10085945/set-cflags-and-cxxflags-options-using-cmake
+# 参考: https://stackoverflow.com/questions/10085945/set-cflags-and-cxxflags-options-using-cmake
+
+# 创建新的源文件时, 要记得及时 Reload CMake Project
 
 # 使用此配置头文件，头文件不用再写成 "../../../" 这样丑陋的路径了
 include_directories(../server)
@@ -55,4 +60,3 @@ add_executable(sherkd ./sherkd.c
 
 # 由于用到了线程, 所以需要此配置
 target_link_libraries(sherkd pthread)
-
