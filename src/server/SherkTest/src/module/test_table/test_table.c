@@ -3,6 +3,10 @@
 #include <SherkMechanism/src/module/grocery/grocery.h>
 #include <SherkSupport/src/module/table_maintainer/table_maintainer.h>
 #include <SherkSupport/src/module/table_painter/table_painter.h>
+#include <memory.h>
+#include <time.h>
+#include <stdlib.h>
+#include <SherkSupport/src/include/const/core.h>
 
 
 void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
@@ -119,7 +123,7 @@ table_traverser_simulate_a_table_demo(char *database_name, char *name, int auto_
 
     table_traverser_sow_seeds_to_table(struct_table_pointer);
 
-    loyal_serializer_serialize_table(struct_table_pointer);
+    // loyal_serializer_serialize_table(struct_table_pointer);
 
     return struct_table_pointer;
 }
