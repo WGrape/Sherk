@@ -25,6 +25,7 @@ file(GLOB_RECURSE source_list_sherkSQL_h "./SherkSQL/*.h")
 file(GLOB_RECURSE source_list_sherkStorage_h "./SherkStorage/*.h")
 file(GLOB_RECURSE source_list_sherkSupport_h "./SherkSupport/*.h")
 file(GLOB_RECURSE source_list_sherkSystem_h "./SherkSystem/*.h")
+file(GLOB_RECURSE source_list_sherkTest_h "./SherkTest/*.h")
 
 file(GLOB_RECURSE source_list_sherkEngine_c "./SherkEngine/*.c")
 file(GLOB_RECURSE source_list_sherkLaunch_c "./SherkLaunch/*.c")
@@ -34,6 +35,7 @@ file(GLOB_RECURSE source_list_sherkSQL_c "./SherkSQL/*.c")
 file(GLOB_RECURSE source_list_sherkStorage_c "./SherkStorage/*.c")
 file(GLOB_RECURSE source_list_sherkSupport_c "./SherkSupport/*.c")
 file(GLOB_RECURSE source_list_sherkSystem_c "./SherkSystem/*.c")
+file(GLOB_RECURSE source_list_sherkTest_c "./SherkTest/*.c")
 
 add_executable(sherkd ./sherkd.c
 
@@ -45,6 +47,7 @@ add_executable(sherkd ./sherkd.c
         ${source_list_sherkStorage_h}
         ${source_list_sherkSupport_h}
         ${source_list_sherkSystem_h}
+        ${source_list_sherkTest_h}
 
 
         ${source_list_sherkEngine_c}
@@ -55,6 +58,7 @@ add_executable(sherkd ./sherkd.c
         ${source_list_sherkStorage_c}
         ${source_list_sherkSupport_c}
         ${source_list_sherkSystem_c}
+        ${source_list_sherkTest_c}
 
         )
 
