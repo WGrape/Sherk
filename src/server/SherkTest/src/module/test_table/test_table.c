@@ -1,21 +1,8 @@
 #include <stdio.h>
 #include <SherkSupport/src/include/serialize/tobe_serialized_structs.h>
 #include <SherkMechanism/src/module/grocery/grocery.h>
-
-
-// 模拟出一张demo表
-Struct_Table *
-table_traverser_simulate_a_table_demo(char *database_name, char *name, int auto_increment, int engine, int charset) {
-
-    Struct_Table *struct_table_pointer = table_traverser_create_a_table(database_name, name, auto_increment, engine,
-                                                                        charset);
-
-    table_traverser_sow_seeds_to_table(struct_table_pointer);
-
-    loyal_serializer_serialize_table(struct_table_pointer);
-
-    return struct_table_pointer;
-}
+#include <SherkSupport/src/module/table_maintainer/table_maintainer.h>
+#include <SherkSupport/src/module/table_painter/table_painter.h>
 
 
 void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
@@ -123,6 +110,21 @@ void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
 
 
 
+// 模拟出一张demo表
+Struct_Table *
+table_traverser_simulate_a_table_demo(char *database_name, char *name, int auto_increment, int engine, int charset) {
+
+    Struct_Table *struct_table_pointer = table_traverser_create_a_table(database_name, name, auto_increment, engine,
+                                                                        charset);
+
+    table_traverser_sow_seeds_to_table(struct_table_pointer);
+
+    loyal_serializer_serialize_table(struct_table_pointer);
+
+    return struct_table_pointer;
+}
+
+
 
 /**
  * TEST: 打印表的结构信息
@@ -155,7 +157,6 @@ void table_traverser_test_print_table_struct_info(Struct_Table *struct_table_poi
     printf("----------------------------------------\n");
 
 }
-
 
 
 /**
@@ -204,7 +205,7 @@ void table_traverser_print_table_info(Struct_Table *struct_table_pointer) {
     for (; i <= record_counts; ++i) {
 
         // printf("field_pointer = %p, ", field_pointer);
-        table_traverser_print_table_record_info(field_pointer);
+        table_painter_print_table_record_info(field_pointer);
         field_pointer = field_pointer->next_record;
     }
 
