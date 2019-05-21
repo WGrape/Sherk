@@ -30,6 +30,11 @@ sherk login
 1. 运行客户端main函数只有2种方法：①使用 ./sherk ②使用 sherk 。第②种需要把sherk命令添加到环境变量中
 2. 使用第②种的时候，如果修改了源码，一定要记得及时把编译后的程序移到 bin 目录下，这样才能及时生效。（ 多么痛的领悟 ）
 3. 可以执行客户端 build.sh 脚本对项目构建。
+4. 添加到环境变量中的方法是修改 ~/.bash_profile 文件，如下
+```bash
+export PATH=${PATH}:~/github/Sherk/src/client/bin
+export PATH=${PATH}:~/github/Sherk/src/server/bin
+```
 
 ### 运行服务端
 

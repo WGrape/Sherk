@@ -4,8 +4,8 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <string.h>
-#include <include/helper/exit.h>
 #include <include/define/const.h>
+#include <module/grocery/grocery.h>
 #include "include/define/rescode.h"
 #include "include/define/message.h"
 
@@ -57,7 +57,7 @@ void network_init() {
     int conn = connect(client_socket, (struct sockaddr *) &server_address, sizeof(server_address));
     if (RES_OK != conn) {
 
-        exit_with_error(MES_CLIENT_CANNOT_CONNECT_TO_SERVER);
+        grocery_exit_with_error(MES_CLIENT_CANNOT_CONNECT_TO_SERVER);
     }
 
     // printf("客户端连接服务器成功\n");

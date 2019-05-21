@@ -8,9 +8,14 @@
 #define CONST_PASSWORD_MAX_LEN 20
 
 
-
 // 传输的SQL最大长度和接收服务端响应的缓冲区长度
 #define CONST_BUFFER_SIZE 100000
 #define CONST_SQL_SIZE 100000
+
+// 退出信号
+#define EXIT_SIGNAL_NATURAL 1 // 自然退出
+#define EXIT_SIGNAL_CERTIFICATE_ERROR 2 // 登录时凭证错误而退出
+#define EXIT_SIGNAL_UNKNOWN_COMMAND 3 // 无法识别的命令而退出
+#define EXIT_SIGNAL_KILL_PROCESS 4 // 杀掉进程而退出
 
 #endif

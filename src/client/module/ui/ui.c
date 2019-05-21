@@ -5,8 +5,13 @@
 #include "include/define/const.h"
 #include "include/object/User.h"
 #include <termios.h>
-# include<unistd.h>
+#include<unistd.h>
 
+#ifndef CLIENT_INCLUDE_HELPER_CONSOLE_H
+
+#include <module/grocery/grocery.h>
+
+#endif
 
 void ui_handle_enter_key(char *sql);
 
@@ -72,7 +77,12 @@ char *ui_password_input_safely(char *password) {
 
     tcsetattr(0, TCSANOW, &old);//登陆成功后恢复原有终端参数，正常回显
 
-    printf("\n");
+    // 这个处理的时候, 会加上换行, 故需要删除掉换行符
+    for (int i = 0; '\0' != password[i] ; ++i) {
+        if('\n' == password[i]){
+            password[i] = '\0';
+        }
+    }
 
     return password;
 }
@@ -108,13 +118,16 @@ void ui_print_bye() {
 // 打印出账号不存在
 void ui_print_account_not_exist() {
 
-    printf("Account not esist!\n");
+    grocery_console_print_with_red_color("Account not esist or wrong !\n");
 }
 
 // 打印出sql响应的数据
 void ui_print_sql_response_data(char *buffer) {
 
-    printf("ui_print_sql_response_data: %s\n", buffer);
+    // printf("ui_print_sql_response_data: %s\n", buffer);
+
+    grocery_console_print_with_blue_color(buffer);
+
 }
 
 // 打印出登录对话框
@@ -122,6 +135,7 @@ User ui_print_login_dialog() {
 
     char name[30];
     char password[30];
+    memset(password, '\0', sizeof(password));
 
     int times = 1;
     while (1) {
