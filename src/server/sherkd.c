@@ -2,8 +2,6 @@
 #include <SherkLaunch/src/sherkLaunch.h>
 #include <msgpack.h>
 #include <stdlib.h>
-#include <SherkSupport/src/module/table_traverser/table_traverser.h>
-#include <SherkSupport/src/include/const/core.h>
 #include <SherkSupport/src/vendor/encrypter/encrypter.h>
 
 int main() {

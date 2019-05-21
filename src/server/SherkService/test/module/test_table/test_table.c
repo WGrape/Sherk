@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <SherkSupport/src/include/serialize/tobe_serialized_structs.h>
-#include <SherkSupport/src/module/table_maintainer/table_maintainer.h>
-#include <SherkSupport/src/module/table_painter/table_painter.h>
 #include <memory.h>
 #include <time.h>
 #include <stdlib.h>
-#include <SherkSupport/src/include/const/core.h>
 #include <SherkService/mechanism/module/grocery/grocery.h>
+#include <SherkSupport/src/module/skeleton/skeleton.h>
+#include <SherkSupport/src/module/maintainer/table_maintainer/table_maintainer.h>
+#include <SherkSupport/src/module/painter/table_painter/table_painter.h>
 
 
-void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
+void test_table_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
 
     int i = 0, j = 0;
 
@@ -46,14 +46,14 @@ void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
             if (0 == i) {
 
                 // 创建的是定义字段
-                current = table_traverser_create_a_field_int(FIELD_TYPE_INT, field_name,
+                current = table_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
                                                              random_value, j,
                                                              1,
                                                              0 == j);
             } else {
 
                 // 创建的是值字段
-                current = table_traverser_create_a_field_int(FIELD_TYPE_INT, field_name,
+                current = table_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
                                                              random_value, j,
                                                              0,
                                                              0 == j);
@@ -103,25 +103,25 @@ void table_traverser_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
             }
 
             // 因为我打印的是当前的字段, 所以 next 才一直都是NULL, 不是我的程序有问题 !
-            // table_traverser_test_print_table_record_info(current);
+            // test_table_print_table_record_info(current);
         }
 
-        // table_traverser_test_print_table_record_info(struct_table_pointer->first_field);
+        // test_table_print_table_record_info(struct_table_pointer->first_field);
     }
 
-    // table_traverser_print_table_record_info(struct_table_pointer->first_field);
+    // test_table_print_table_record_info(struct_table_pointer->first_field);
 }
 
 
 
 // 模拟出一张demo表
 Struct_Table *
-table_traverser_simulate_a_table_demo(char *database_name, char *name, int auto_increment, int engine, int charset) {
+test_table_simulate_a_table_demo(char *database_name, char *name, int auto_increment, int engine, int charset) {
 
-    Struct_Table *struct_table_pointer = table_traverser_create_a_table(database_name, name, auto_increment, engine,
+    Struct_Table *struct_table_pointer = table_maintainer_create_a_table(database_name, name, auto_increment, engine,
                                                                         charset);
 
-    table_traverser_sow_seeds_to_table(struct_table_pointer);
+    test_table_sow_seeds_to_table(struct_table_pointer);
 
     // loyal_serializer_serialize_table(struct_table_pointer);
 
@@ -134,7 +134,7 @@ table_traverser_simulate_a_table_demo(char *database_name, char *name, int auto_
  * TEST: 打印表的结构信息
  * @param struct_table_pointer
  */
-void table_traverser_test_print_table_struct_info(Struct_Table *struct_table_pointer) {
+void test_table_print_table_struct_info(Struct_Table *struct_table_pointer) {
 
     printf("\n数据表信息测试结果如下 :");
     printf("\n----------------------------------------\n");
@@ -167,7 +167,7 @@ void table_traverser_test_print_table_struct_info(Struct_Table *struct_table_poi
  * TEST: 打印表字段的信息
  * @param struct_field_pointer
  */
-void table_traverser_test_print_table_field_info(Struct_Field *struct_field_pointer) {
+void test_table_print_table_field_info(Struct_Field *struct_field_pointer) {
 
     printf("\n数据表字段测试数据如下 :");
     printf("\n----------------------------------------\n");
@@ -200,7 +200,7 @@ void table_traverser_test_print_table_field_info(Struct_Field *struct_field_poin
  * TEST: 打印表信息, 包括表头和数据的信息
  * @param struct_table
  */
-void table_traverser_print_table_info(Struct_Table *struct_table_pointer) {
+void test_table_print_table_info(Struct_Table *struct_table_pointer) {
 
     int i = 0, record_counts = struct_table_pointer->record_counts;
     grocery_console_print_with_blue_color("\n--------------正在打印此整张表------------->\n");
@@ -220,12 +220,12 @@ void table_traverser_print_table_info(Struct_Table *struct_table_pointer) {
  * TEST: 打印表记录信息
  * @param first_field
  */
-void table_traverser_test_print_table_record_info(Struct_Field *first_field) {
+void test_table_print_table_record_info(Struct_Field *first_field) {
 
     grocery_console_print_with_blue_color("\n-------------正在打印一条记录------------->\n");
     while (NULL != first_field) {
 
-        table_traverser_test_print_table_field_info(first_field);
+        test_table_print_table_field_info(first_field);
         first_field = first_field->next;
     }
     grocery_console_print_with_blue_color("\n<-------------结束打印一条记录-------------\n");
@@ -237,12 +237,12 @@ void table_traverser_test_print_table_record_info(Struct_Field *first_field) {
  * TEST: 打印表列的信息
  * @param column_first_field
  */
-void table_traverser_test_print_table_column_info(Struct_Field *column_first_field) {
+void test_table_print_table_column_info(Struct_Field *column_first_field) {
 
     grocery_console_print_with_blue_color("\n-------------正在打印一列记录------------->\n");
     while (NULL != column_first_field) {
 
-        table_traverser_test_print_table_field_info(column_first_field);
+        test_table_print_table_field_info(column_first_field);
         column_first_field = column_first_field->next_record;
     }
     grocery_console_print_with_blue_color("\n<-------------结束打印一列记录-------------\n");
