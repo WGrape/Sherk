@@ -20,45 +20,37 @@ include_directories(../server)
 file(GLOB_RECURSE source_list_sherkEngine_h "./SherkEngine/*.h")
 file(GLOB_RECURSE source_list_sherkLaunch_h "./SherkLaunch/*.h")
 file(GLOB_RECURSE source_list_sherkLink_h "./SherkLink/*.h")
-file(GLOB_RECURSE source_list_sherkMechanism_h "./SherkMechanism/*.h")
+file(GLOB_RECURSE source_list_sherkService_h "SherkService/*.h")
 file(GLOB_RECURSE source_list_sherkSQL_h "./SherkSQL/*.h")
 file(GLOB_RECURSE source_list_sherkStorage_h "./SherkStorage/*.h")
 file(GLOB_RECURSE source_list_sherkSupport_h "./SherkSupport/*.h")
-file(GLOB_RECURSE source_list_sherkSystem_h "./SherkSystem/*.h")
-file(GLOB_RECURSE source_list_sherkTest_h "./SherkTest/*.h")
 
 file(GLOB_RECURSE source_list_sherkEngine_c "./SherkEngine/*.c")
 file(GLOB_RECURSE source_list_sherkLaunch_c "./SherkLaunch/*.c")
 file(GLOB_RECURSE source_list_sherkLink_c "./SherkLink/*.c")
-file(GLOB_RECURSE source_list_sherkMechanism_c "./SherkMechanism/*.c")
+file(GLOB_RECURSE source_list_sherkService_c "SherkService/*.c")
 file(GLOB_RECURSE source_list_sherkSQL_c "./SherkSQL/*.c")
 file(GLOB_RECURSE source_list_sherkStorage_c "./SherkStorage/*.c")
 file(GLOB_RECURSE source_list_sherkSupport_c "./SherkSupport/*.c")
-file(GLOB_RECURSE source_list_sherkSystem_c "./SherkSystem/*.c")
-file(GLOB_RECURSE source_list_sherkTest_c "./SherkTest/*.c")
 
 add_executable(sherkd ./sherkd.c
 
         ${source_list_sherkEngine_h}
         ${source_list_sherkLaunch_h}
         ${source_list_sherkLink_h}
-        ${source_list_sherkMechanism_h}
         ${source_list_sherkSQL_h}
         ${source_list_sherkStorage_h}
         ${source_list_sherkSupport_h}
-        ${source_list_sherkSystem_h}
-        ${source_list_sherkTest_h}
+        ${source_list_sherkService_h}
 
 
         ${source_list_sherkEngine_c}
         ${source_list_sherkLaunch_c}
         ${source_list_sherkLink_c}
-        ${source_list_sherkMechanism_c}
         ${source_list_sherkSQL_c}
         ${source_list_sherkStorage_c}
         ${source_list_sherkSupport_c}
-        ${source_list_sherkSystem_c}
-        ${source_list_sherkTest_c}
+        ${source_list_sherkService_c}
 
         )
 
