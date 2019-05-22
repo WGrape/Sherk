@@ -5,12 +5,37 @@
 #include <include/define/rescode.h>
 #include <module/grocery/grocery.h>
 
+/**
+ * 是否开启测试
+ * @param option
+ * @return
+ */
+int test_is_open(char *option){
+
+    if (0 == grocery_is_debug()) {
+
+        return 0;
+    }
+
+    if (1 != administrator_method_read_config_int(option)) {
+
+        return 0;
+    }
+
+    return 1;
+}
+
 
 // md5( lvsi + md5(123456) + 08f2a4c2f6983f2880d32 )
 // md5(123456) = e10adc3949ba59abbe56e057f20f883e
 // lvsie10adc3949ba59abbe56e057f20f883e08f2a4c2f6983f2880d32
 // md5(lvsie10adc3949ba59abbe56e057f20f883e08f2a4c2f6983f2880d32) = 1a608fd277cbd9485297c1716cb81ac4
-char *test_generate_sherk_password(char *password_file, char *name, char *password, char *salt) {
+void test_generate_sherk_password(char *password_file, char *name, char *password, char *salt) {
+
+    if (0 == test_is_open("app.debug.login_credential")) {
+
+        return;
+    }
 
     // sherk_password
     char sherk_password[200]; // 开100还不够

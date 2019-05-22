@@ -16,7 +16,6 @@ set(MODULE_DIR ./module)
 add_executable(sherk ./sherk.c
 
         ${INCLUDE_DIR}/define/const.h
-        ${INCLUDE_DIR}/define/exitcode.h
         ${INCLUDE_DIR}/define/message.h
         ${INCLUDE_DIR}/define/rescode.h
 

@@ -7,9 +7,11 @@ extern void grocery_console_print_with_red_color(char *s);
 
 extern void grocery_console_print_with_blue_color(char *s);
 
-extern void grocery_console_print_with_color();
+extern void grocery_console_print_with_color(char *color, char *s);
 
 extern void grocery_exit_with_error(char *msg);
+
+extern int grocery_is_debug();
 
 extern int grocery_is_file_exists(char *file);
 

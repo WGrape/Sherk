@@ -229,5 +229,3 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 > * [MySQL误操作后如何快速回滚](https://www.jianshu.com/p/4b71eb2de1ba)
 > * [What are MySQL triggers and how to use them?](https://www.siteground.com/kb/mysql-triggers-use/)
-
-

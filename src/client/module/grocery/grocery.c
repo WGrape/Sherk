@@ -41,6 +41,15 @@ void grocery_exit_with_error(char *msg) {
     exit(-1);
 }
 
+int grocery_is_debug() {
+
+    if (0 != strcmp("debug", administrator_method_read_config_string("environment"))) {
+
+        return 0;
+    }
+
+    return 1;
+}
 
 int grocery_is_file_exists(char *file) {
 

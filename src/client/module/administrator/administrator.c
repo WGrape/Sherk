@@ -27,6 +27,16 @@ config_t *administrator_method_get_config() {
     return administrator_property_conf;
 }
 
+int administrator_method_read_config_int(const char *path) {
+
+    config_t *config = administrator_method_get_config();
+
+    int value;
+    config_lookup_int(config, path, &value);
+
+    return value;
+}
+
 char *administrator_method_read_config_string(const char *path) {
 
     config_t *config = administrator_method_get_config();

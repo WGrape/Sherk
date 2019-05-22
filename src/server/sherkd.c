@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <SherkLaunch/src/sherkLaunch.h>
-#include <msgpack.h>
-#include <stdlib.h>
-#include <SherkSupport/src/vendor/encrypter/encrypter.h>
 
 int main() {
 
