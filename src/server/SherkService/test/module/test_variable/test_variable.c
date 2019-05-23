@@ -27,6 +27,7 @@ void test_variable_print_variable() {
 
     VariableMaster_SQLContainer *sql_container_pointer = &(variable_master_session_variables.sql_container);
     VariableMaster_UserClient *user_client_pointer = &(variable_master_session_variables.user_client);
+    VariableMaster_DatabaseVessel *database_vessel_pointer = &(variable_master_session_variables.database_vessel);
 
     if (0 == test_variable_is_open()) {
 
@@ -46,6 +47,8 @@ void test_variable_print_variable() {
     printf("| is_login     | %d \n", user_client_pointer->is_login);
     printf("| session      | %s \n", user_client_pointer->session);
     printf("| time         | %s \n", user_client_pointer->time);
+
+    printf("| database     | %s \n", database_vessel_pointer->database_name); // 当前使用的数据库
 
     printf("| sql          | %s \n", sql_container_pointer->sql);
     printf("| sql_category | %d \n", sql_container_pointer->sql_category);
