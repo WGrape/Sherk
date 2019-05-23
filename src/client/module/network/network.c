@@ -25,18 +25,19 @@ void network_socket_connect(char *sql, char *buffer) {
     int conn = GLOBAL_CLIENT_MODULE_NETWORK_conn, client_socket = GLOBAL_CLIENT_MODULE_NETWORK_client_socket;
 
     // send the message
-    if (RES_EXCEPTION == send(client_socket, sql, strlen(sql), 0)) {
+    if (RES_OK > send(client_socket, sql, strlen(sql), 0)) {
 
         printf("发送server消息失败...\n");
         return;
     }
 
     // receive data from the server
-    if (RES_EXCEPTION == recv(client_socket, buffer, CONST_BUFFER_SIZE, 0)) {
+    if (RES_OK > recv(client_socket, buffer, CONST_BUFFER_SIZE, 0)) {
 
         printf("接收server响应失败...");
         return;
     }
+    // printf("----------buffer:%s,长度是%zd,接收的长度是%zd--------", buffer, strlen(buffer), readnumber);
 }
 
 void network_init() {
