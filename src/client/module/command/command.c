@@ -53,7 +53,7 @@ int command_logout_success(int exit_signal) {
     if (EXIT_SIGNAL_NATURAL == exit_signal) {
 
         // 如果是正常退出, 则做清理回收操作
-    }else if( EXIT_SIGNAL_UNKNOWN_COMMAND == exit_signal ){
+    } else if (EXIT_SIGNAL_UNKNOWN_COMMAND == exit_signal) {
 
         // 如果是无法识别的命令
         return EXIT_SIGNAL_UNKNOWN_COMMAND;
@@ -88,6 +88,9 @@ int command_enter_sql_interactive_env() {
         strcpy(sql_backup, "SQL=");
         strcat(sql_backup, sql);
         strcpy(sql, sql_backup);
+        if (';' == sql[strlen(sql) - 1]) {
+            sql[strlen(sql) - 1] = '\0';
+        }
         express_transport_sql(sql, buffer);
         ui_print_sql_response_data(buffer);
     }

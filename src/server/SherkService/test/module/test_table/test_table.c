@@ -7,6 +7,59 @@
 #include <SherkSupport/src/module/skeleton/skeleton.h>
 #include <SherkSupport/src/module/painter/table_painter/table_painter.h>
 #include <SherkSupport/src/module/maintainer/table_in_memory_maintainer/table_in_memory_maintainer.h>
+#include <SherkSupport/src/module/maintainer/table_in_disk_maintainer/table_in_disk_maintainer.h>
+#include <SherkService/mechanism/module/variable_master/variable_master.h>
+#include <SherkService/mechanism/include/define/color.h>
+
+extern Variable_Master_Session_Variables variable_master_session_variables;
+
+void test_table_print_tables(char *database_name) {
+
+    printf("\n");
+    printf("--------------------------------------------------\n");
+    printf("| The Tables in Database:%s \n", database_name);
+    printf("--------------------------------------------------");
+
+    FILE *fp = table_in_disk_maintainer_show_tables(database_name, 0);
+    char szTest[1000] = {0};
+
+    int count = 0;
+
+    while (!feof(fp)) {
+        memset(szTest, 0, sizeof(szTest));
+        fgets(szTest, sizeof(szTest), fp); // sizeof(szTest) - 1:包含了换行符
+
+        if ('\n' == szTest[strlen(szTest) - 1]) {
+            szTest[strlen(szTest) - 1] = '\0';
+        }
+
+        if (0 == strcmp("temp_show_tables.txt", szTest) || strlen(szTest) < 1) {
+
+            continue;
+        }
+
+        int right = grocery_string_get_str_first_char_index(szTest, ".table", 0);
+        if (-1 == right) {
+            continue;
+        }
+        // printf("-----------right:%d-----------",right);
+
+        right = right - 1;
+        printf("\n| %s", grocery_string_cutwords(szTest, 0, right));
+        ++count;
+    }
+    fclose(fp);
+
+    table_in_disk_maintainer_show_tables(database_name, 1);
+
+    if (count < 1) {
+
+        printf("\nEmpty !");
+    }
+
+    printf("\n--------------------------------------------------\n");
+
+}
 
 
 void test_table_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
@@ -46,17 +99,17 @@ void test_table_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
             if (0 == i) {
 
                 // 创建的是定义字段
-                current = table_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
-                                                             random_value, j,
-                                                             1,
-                                                             0 == j);
+                current = table_in_memory_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
+                                                                        random_value, j,
+                                                                        1,
+                                                                        0 == j);
             } else {
 
                 // 创建的是值字段
-                current = table_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
-                                                             random_value, j,
-                                                             0,
-                                                             0 == j);
+                current = table_in_memory_maintainer_create_a_field_int(FIELD_TYPE_INT, field_name,
+                                                                        random_value, j,
+                                                                        0,
+                                                                        0 == j);
             }
             current_record = current;
             current->record_index = i;
@@ -113,13 +166,13 @@ void test_table_sow_seeds_to_table(Struct_Table *struct_table_pointer) {
 }
 
 
-
 // 模拟出一张demo表
 Struct_Table *
 test_table_simulate_a_table_demo(char *database_name, char *name, int auto_increment, int engine, int charset) {
 
-    Struct_Table *struct_table_pointer = table_maintainer_create_a_table(database_name, name, auto_increment, engine,
-                                                                        charset);
+    Struct_Table *struct_table_pointer = table_in_memory_maintainer_create_a_table(database_name, name, auto_increment,
+                                                                                   engine,
+                                                                                   charset);
 
     test_table_sow_seeds_to_table(struct_table_pointer);
 
@@ -127,7 +180,6 @@ test_table_simulate_a_table_demo(char *database_name, char *name, int auto_incre
 
     return struct_table_pointer;
 }
-
 
 
 /**
@@ -202,18 +254,22 @@ void test_table_print_table_field_info(Struct_Field *struct_field_pointer) {
  */
 void test_table_print_table_info(Struct_Table *struct_table_pointer) {
 
-    int i = 0, record_counts = struct_table_pointer->record_counts;
-    grocery_console_print_with_blue_color("\n--------------正在打印此整张表------------->\n");
+    int i, record_counts = struct_table_pointer->record_counts;
+    grocery_console_print_with_blue_color("\n---------------------------------------------------");
+    grocery_console_print_with_blue_color("| The Table as follows");
+    grocery_console_print_with_blue_color("---------------------------------------------------");
 
-    Struct_Field *field_pointer = struct_table_pointer->first_field;
-    for (; i <= record_counts; ++i) {
+    // 打印表头
+    table_painter_print_table_record_info(struct_table_pointer->first_field);
 
-        // printf("field_pointer = %p, ", field_pointer);
-        table_painter_print_table_record_info(field_pointer);
-        field_pointer = field_pointer->next_record;
+    // 打印表数据
+    Struct_Field *record_pointer = struct_table_pointer->first_record;
+    for (i = 1; i <= record_counts; ++i) { // 直接把表头也打印出来
+
+        table_painter_print_table_record_info(record_pointer);
+        record_pointer = record_pointer->next_record;
     }
-
-    grocery_console_print_with_blue_color("\n<-------------正在打印此整张表--------------\n");
+    printf(NONE);
 }
 
 /**
@@ -230,7 +286,6 @@ void test_table_print_table_record_info(Struct_Field *first_field) {
     }
     grocery_console_print_with_blue_color("\n<-------------结束打印一条记录-------------\n");
 }
-
 
 
 /**

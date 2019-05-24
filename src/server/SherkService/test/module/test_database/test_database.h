@@ -1,0 +1,6 @@
+#ifndef SERVER_SHERK_SERVICE_TEST_MODULE_TEST_DATABASE_H
+#define SERVER_SHERK_SERVICE_TEST_MODULE_TEST_DATABASE_H
+
+extern void test_database_print_databases();
+
+#endif
