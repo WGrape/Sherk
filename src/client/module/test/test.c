@@ -58,9 +58,9 @@ void test_generate_sherk_password(char *password_file, char *name, char *passwor
     strcpy(read_password_from_file, grocery_read_file(password_file));
 
     printf("\n\n");
-    printf("------------------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------\n");
     printf("| The following is the generated security credential \n");
-    printf("------------------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------\n");
     printf("| name                    | %s \n", name);
     printf("| password                | %s \n", password);
     printf("| like-md5 password       | %s \n", md5_password);
@@ -68,7 +68,7 @@ void test_generate_sherk_password(char *password_file, char *name, char *passwor
     printf("| sherk_password          | %s \n", sherk_password);
     printf("| read_password_from_file | %s \n", read_password_from_file);
     printf("| password_file           | %s \n", password_file);
-    printf("----------------------------------------------------------------------------------------\n\n");
+    printf("------------------------------------------------------------------\n\n");
 
 }
 

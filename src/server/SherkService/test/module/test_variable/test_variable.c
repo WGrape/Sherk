@@ -31,7 +31,7 @@ void test_variable_print_variable() {
 
     if (0 == test_variable_is_open()) {
 
-        return;
+        // return;
     }
 
     // 只有在调试模式下打印

@@ -27,7 +27,7 @@ void test_network_print_network(char *ip, int port, char *response) {
 
     if (0 == test_network_is_open()) {
 
-        return;
+        // return;
     }
 
     // 只有在调试模式下打印
@@ -50,14 +50,19 @@ void test_network_print_network(char *ip, int port, char *response) {
     // printf("| last_sql     | %s \n", variable_master_session_variables.sql_container.last_sql);
     // printf("| last_sql_len | %zd \n", variable_master_session_variables.sql_container.last_sql_len);
 
-    if ('\n' == response[strlen(response) - 1]) {
-        response[strlen(response) - 1] = '\0';
+    if (NULL != response) {
+
+        printf("| response     | %s \n", response);
     }
-    
-    printf("| response     | %s \n", response);
 
     printf("--------------------------------------------------\n");
 
 }
 
+void test_network_print_network_directly() {
+
+    char *ip = variable_master_session_variables.user_client.ip;
+    int port = variable_master_session_variables.user_client.port;
+    test_network_print_network(ip, port, NULL);
+}
 

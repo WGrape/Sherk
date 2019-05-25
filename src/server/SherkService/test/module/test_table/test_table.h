@@ -9,4 +9,6 @@ extern void test_table_print_table_record_info(Struct_Field *first_field);
 
 extern void test_table_print_table_struct_info(Struct_Table *struct_table_pointer);
 
+extern void test_table_print_table_head_info(Struct_Table *struct_table_pointer);
+
 #endif

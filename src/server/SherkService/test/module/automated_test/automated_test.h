@@ -1,0 +1,6 @@
+#ifndef SERVER_SHERK_SERVICE_TEST_MODULE_AUTOMATED_TEST_H
+#define SERVER_SHERK_SERVICE_TEST_MODULE_AUTOMATED_TEST_H
+
+extern void automated_test_main();
+
+#endif

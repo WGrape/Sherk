@@ -188,7 +188,7 @@ test_table_simulate_a_table_demo(char *database_name, char *name, int auto_incre
  */
 void test_table_print_table_struct_info(Struct_Table *struct_table_pointer) {
 
-    printf("\n数据表信息测试结果如下 :");
+    // printf("\n数据表信息测试结果如下 :");
     printf("\n----------------------------------------\n");
 
 
@@ -213,7 +213,6 @@ void test_table_print_table_struct_info(Struct_Table *struct_table_pointer) {
     printf("----------------------------------------\n");
 
 }
-
 
 /**
  * TEST: 打印表字段的信息
@@ -303,4 +302,28 @@ void test_table_print_table_column_info(Struct_Field *column_first_field) {
     grocery_console_print_with_blue_color("\n<-------------结束打印一列记录-------------\n");
 }
 
+/**
+ * Test: 打印数据表的头部字段信息
+ * @param struct_table_pointer
+ */
+void test_table_print_table_head_info(Struct_Table *struct_table_pointer){
 
+    Struct_Field *field_pointer = struct_table_pointer -> first_field;
+    // test_table_print_table_record_info(field_pointer);
+
+    printf("------------------------------------------------------------------------------------------\n");
+    printf("| id | field_name | field_type | field_index | is_definition | is_primary_key \n") ;
+    printf("------------------------------------------------------------------------------------------\n");
+
+    while(NULL != field_pointer){
+
+        printf("| %d  ", field_pointer->id);
+        printf("|     %s   ", field_pointer->field_name);
+        printf("|     %d   ", field_pointer->field_type);
+        printf("|     %d   ", field_pointer->field_index);
+        printf("|     %d   ", field_pointer->is_definition);
+        printf("|     %d   ", field_pointer->is_primary_key);
+        printf("\n------------------------------------------------------------------------------------------\n");
+        field_pointer = field_pointer->next;
+    }
+}
