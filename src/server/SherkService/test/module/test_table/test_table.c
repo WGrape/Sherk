@@ -272,6 +272,41 @@ void test_table_print_table_info(Struct_Table *struct_table_pointer) {
 }
 
 /**
+ * TEST: 打印表(部分)信息
+ * @param first_record_pointer
+ * @param from
+ * @param to
+ */
+void test_table_print_table_part_info(Struct_Table *struct_table_pointer, int from, int to) {
+
+    int i = 1;
+
+    grocery_console_print_with_blue_color("\n---------------------------------------------------");
+    grocery_console_print_with_blue_color("| The Table as follows");
+    grocery_console_print_with_blue_color("---------------------------------------------------");
+
+    // 打印表头
+    table_painter_print_table_record_info(struct_table_pointer->first_field);
+
+    // 不判断是否过界, 由调用方判断, 即肯定 from >= 1
+    Struct_Field *record_pointer = struct_table_pointer->first_record;
+    while (i < from) {
+
+        record_pointer = record_pointer->next_record;
+        ++i;
+    }
+
+    // 打印表数据
+    for (i = from; i <= to; ++i) { // 直接把表头也打印出来
+
+        table_painter_print_table_record_info(record_pointer);
+        record_pointer = record_pointer->next_record;
+    }
+    printf(NONE);
+}
+
+
+/**
  * TEST: 打印表记录信息
  * @param first_field
  */
@@ -306,16 +341,17 @@ void test_table_print_table_column_info(Struct_Field *column_first_field) {
  * Test: 打印数据表的头部字段信息
  * @param struct_table_pointer
  */
-void test_table_print_table_head_info(Struct_Table *struct_table_pointer){
+void test_table_print_table_head_info(Struct_Table *struct_table_pointer) {
 
-    Struct_Field *field_pointer = struct_table_pointer -> first_field;
+    Struct_Field *field_pointer = struct_table_pointer->first_field;
     // test_table_print_table_record_info(field_pointer);
 
-    printf("------------------------------------------------------------------------------------------\n");
-    printf("| id | field_name | field_type | field_index | is_definition | is_primary_key \n") ;
-    printf("------------------------------------------------------------------------------------------\n");
+    printf("\n");
+    printf("------------------------------------------------------------------------------\n");
+    printf("| id | field_name | field_type | field_index | is_definition | is_primary_key \n");
+    printf("------------------------------------------------------------------------------\n");
 
-    while(NULL != field_pointer){
+    while (NULL != field_pointer) {
 
         printf("| %d  ", field_pointer->id);
         printf("|     %s   ", field_pointer->field_name);
@@ -323,7 +359,7 @@ void test_table_print_table_head_info(Struct_Table *struct_table_pointer){
         printf("|     %d   ", field_pointer->field_index);
         printf("|     %d   ", field_pointer->is_definition);
         printf("|     %d   ", field_pointer->is_primary_key);
-        printf("\n------------------------------------------------------------------------------------------\n");
+        printf("\n------------------------------------------------------------------------------\n");
         field_pointer = field_pointer->next;
     }
 }
