@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <SherkSupport/src/module/maintainer/table_in_memory_maintainer/table_in_memory_maintainer.h>
+#include <SherkSupport/src/module/skeleton/skeleton.h>
 
 char **faker_get_field_name_list(int case_id) {
 
@@ -22,5 +25,9 @@ char **faker_get_field_name_list(int case_id) {
 
 char **faker_get_field_type_list(int case_id) {
 
+
+}
+
+char *faker_simulate_a_record_json(int id, char *table_name) {
 
 }

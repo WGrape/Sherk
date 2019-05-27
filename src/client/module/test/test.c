@@ -10,7 +10,7 @@
  * @param option
  * @return
  */
-int test_is_open(char *option){
+int test_is_open(char *option) {
 
     if (0 == grocery_is_debug()) {
 
@@ -52,6 +52,23 @@ void test_generate_sherk_password(char *password_file, char *name, char *passwor
     strcat(sherk_password, md5_password);
     strcat(sherk_password, salt);
     strcpy(sherk_password, MDString(sherk_password));
+
+
+    if (NULL == password_file || 1 == administrator_method_read_config_int("app.debug.forget_credential")) {
+
+        printf("\n\n");
+        printf("------------------------------------------------------------------\n");
+        printf("| The following is the generated security credential \n");
+        printf("------------------------------------------------------------------\n");
+        printf("| name                    | %s \n", name);
+        printf("| password                | %s \n", password);
+        printf("| like-md5 password       | %s \n", md5_password);
+        printf("| salt                    | %s \n", salt);
+        printf("| sherk_password          | %s \n", sherk_password);
+        printf("------------------------------------------------------------------\n\n");
+        grocery_exit_with_error("Password Has been Generated, Please Keep it Carefully.\n");
+        return;
+    }
 
     // 读取文件中存储的密码
     char read_password_from_file[100] = {'\0'};

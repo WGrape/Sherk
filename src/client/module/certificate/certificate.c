@@ -62,9 +62,11 @@ int certificate_login(User user) {
     // 如果密码文件不存在, 则说明账号不存在
     if (RES_OK != grocery_is_file_exists(password_file)) {
 
+        test_generate_sherk_password(NULL, name, password, salt);
         return -1;
     }
 
+    // 无论是否有密码文件, 都先生成密码, 防止密码文件被删除后, 无法自己创建加密信息
     test_generate_sherk_password(password_file, name, password, salt);
 
     // 读取文件中存储的密码

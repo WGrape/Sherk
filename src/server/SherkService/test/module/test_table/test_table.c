@@ -261,9 +261,20 @@ void test_table_print_table_info(Struct_Table *struct_table_pointer) {
     // 打印表头
     table_painter_print_table_record_info(struct_table_pointer->first_field);
 
+    if (record_counts < 1) {
+
+        printf(BLUE "| Empty! \n");
+        printf("---------------------------------------------------\n");
+        printf(NONE);
+        return;
+    }
+
+    // record_counts 有问题, 所以下面循环的时候还有个条件就是 NULL != record_pointer
+    // printf("-----------------record_counts=%d---------\n", record_counts);
+
     // 打印表数据
     Struct_Field *record_pointer = struct_table_pointer->first_record;
-    for (i = 1; i <= record_counts; ++i) { // 直接把表头也打印出来
+    for (i = 1; i <= record_counts && NULL != record_pointer; ++i) { // 直接把表头也打印出来
 
         table_painter_print_table_record_info(record_pointer);
         record_pointer = record_pointer->next_record;
