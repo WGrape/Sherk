@@ -3,4 +3,7 @@
 
 extern char *faker_simulate_a_record_json(int id, char *table_name);
 
+extern char *faker_simulate_a_record_update_json(int id, char *table_name);
+
+
 #endif

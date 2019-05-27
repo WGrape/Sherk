@@ -8,7 +8,7 @@ static int automated_times = 1;
 
 void automated_test_print_sql(int i, char *sql) {
 
-    printf(RED "\n\nCase %d: sql = %s", i, sql);
+    printf(WHITE "\n\nCase %d: sql = %s", i, sql);
     printf(BROWN);
 }
 
@@ -32,7 +32,7 @@ void automated_test_end() {
 void automated_test_main(int cmd) {
 
     int i = 0;
-    char sql[17][100] = {
+    char sql[20][100] = {
 
             "show users", // 先查看一下系统的用户
             "show network", // 先看一下网络链路
@@ -54,9 +54,10 @@ void automated_test_main(int cmd) {
 
             "select * from test", // 查看 test 表全部内容
             "select table test",// test:
-//            "insert table test",// test:
-//
-//            "update table test",// test:
+            "insert table test",// test:
+            "update table test",// test:
+            "select * from test", // 查看 test 表全部内容
+
 //            "delete table test",// test:
     };
 
@@ -82,7 +83,7 @@ void automated_test_main(int cmd) {
     if (0 == cmd) {
 
         automated_test_start("完整测试过程");
-        for (; i <= 14; ++i) {
+        for (; i <= 19; ++i) {
 
             automated_test_print_sql(i, sql[i]);
             parser_match_sql(sql[i]);
