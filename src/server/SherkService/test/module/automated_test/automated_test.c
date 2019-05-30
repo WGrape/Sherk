@@ -47,18 +47,17 @@ void automated_test_main(int cmd) {
             "show variables", // 发现会话变量中的 database 确实已经有了
 
             "show tables", // 再看一下所有的数据表, 发现此时库内数据表为空
-            "create table test", // 创建一个 test 数据表
+            "create table test( id int , name string, age int , sex string , flag int )", // 创建一个 test 数据表
             "show tables", // 再看一下全部的数据表, 发现数据表已经生成了, 我们去本地存储发现多了3个文件 : test.frm, test.field, test.table
             "desc table test", // 看一下 test 表的结构信息
             "desc table field test", // 看一下 test 表的字段信息
 
-            "select * from test", // 查看 test 表全部内容
             "select table test",// test:
-            "insert table test",// test:
-            "update table test",// test:
+            "insert into test ('id', 'name', 'age', 'sex', 'flag' ) VALUES ( 2, \"陈奕迅\", 43, \"男\", 768 ) ",
             "select * from test", // 查看 test 表全部内容
-
-//            "delete table test",// test:
+            // "update table test",
+            // "select * from test",
+            // "delete table test",
     };
 
     char sql2[3][100] = {
@@ -83,7 +82,7 @@ void automated_test_main(int cmd) {
     if (0 == cmd) {
 
         automated_test_start("完整测试过程");
-        for (; i <= 19; ++i) {
+        for (; i <= 17; ++i) {
 
             automated_test_print_sql(i, sql[i]);
             parser_match_sql(sql[i]);
