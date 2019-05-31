@@ -10,4 +10,10 @@ extern void test_sql_print_field_name_list(char **field_name_list, int count);
 
 extern void test_sql_print_field_type_list(int *field_type_list, int count);
 
+extern void test_sql_print_condition_name_list(char **condition_name_list, int count);
+
+extern void test_sql_print_condition_operator_list(char **condition_operator_list, int count);
+
+extern void test_sql_print_condition_value_list(char **condition_value_lis, int count);
+
 #endif

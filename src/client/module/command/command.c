@@ -88,7 +88,7 @@ int command_enter_sql_interactive_env() {
         strcpy(sql_backup, "SQL=");
         strcat(sql_backup, sql);
         strcpy(sql, sql_backup);
-        if (';' == sql[strlen(sql) - 1]) {
+        if (';' == sql[strlen(sql) - 1]) { // 处理SQL语句最后面的分号
             sql[strlen(sql) - 1] = '\0';
         }
         express_transport_sql(sql, buffer);
