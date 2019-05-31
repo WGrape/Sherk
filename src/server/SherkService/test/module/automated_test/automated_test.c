@@ -55,8 +55,8 @@ void automated_test_main(int cmd) {
             "select table test",// test:
             "insert into test ('id', 'name', 'age', 'sex', 'flag' ) VALUES ( 2, \"陈奕迅\", 43, \"男\", 768 ) ",
             "select * from test", // 查看 test 表全部内容
-            // "update table test",
-            // "select * from test",
+            "update test set name = \"name被修改呵呵\" where id = 1 ",
+            "select * from test",
             // "delete table test",
     };
 
@@ -82,7 +82,7 @@ void automated_test_main(int cmd) {
     if (0 == cmd) {
 
         automated_test_start("完整测试过程");
-        for (; i <= 17; ++i) {
+        for (; i <= 19; ++i) {
 
             automated_test_print_sql(i, sql[i]);
             parser_match_sql(sql[i]);
