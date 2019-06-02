@@ -32,7 +32,9 @@ void automated_test_end() {
 void automated_test_main(int cmd) {
 
     int i = 0;
-    char sql[20][100] = {
+    char sql[21][100] = {
+
+            "show privileges", // 先看一下系统的权限
 
             "show users", // 先查看一下系统的用户
             "show network", // 先看一下网络链路
@@ -82,7 +84,7 @@ void automated_test_main(int cmd) {
     if (0 == cmd) {
 
         automated_test_start("完整测试过程");
-        for (; i <= 19; ++i) {
+        for (; i <= 20; ++i) {
 
             automated_test_print_sql(i, sql[i]);
             parser_match_sql(sql[i]);
