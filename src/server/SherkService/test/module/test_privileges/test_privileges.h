@@ -3,5 +3,7 @@
 
 extern void test_privileges_print_privileges();
 
+extern void test_privileges_print_grants();
+
 #endif
 

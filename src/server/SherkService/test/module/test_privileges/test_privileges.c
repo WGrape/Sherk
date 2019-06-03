@@ -7,6 +7,7 @@
 #include <SherkService/mechanism/module/grocery/grocery.h>
 #include <SherkStorage/src/vendor/storage_serialization/module/bookworm/bookworm.h>
 
+extern Variable_Master_Session_Variables variable_master_session_variables;
 
 void test_privileges_print_privileges() {
 
@@ -23,5 +24,12 @@ void test_privileges_print_privileges() {
     printf("| 5  | Update     | Tables           | To update exiting rows      |\n");
     printf("| 6  | Select     | Tables           | To retrieve rows from table |\n");
     printf("--------------------------------------------------------------------\n");
+}
+
+
+void test_privileges_print_grants(){
+
+    // 从全局变量 variable_master_session_variables 中获取当前用户名, 并从user表中读取用户的权限信息
+
 }
 
