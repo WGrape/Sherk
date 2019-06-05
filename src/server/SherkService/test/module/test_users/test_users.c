@@ -11,7 +11,9 @@
 extern Variable_Master_Session_Variables variable_master_session_variables;
 
 // 获取全部用户的用户名
-RES_ARRAY **test_users_get_users_username() {
+RES_ARRAY *test_users_get_users_username() {
+
+    RES_ARRAY *res_array = (RES_ARRAY *) malloc(sizeof(RES_ARRAY) * 1);
 
     char **users_username = (char **) malloc(sizeof(char **) * 10);
 
@@ -25,7 +27,7 @@ RES_ARRAY **test_users_get_users_username() {
 
     char *file = "/Users/yimutian/sherk/database/information_schema/user.password/temp_show_users.txt";
     char *certificate;
-    int i, end;
+    int i, end, count = -1;
     for (i = 1;; ++i) {
 
         certificate = bookworm_read_x_line(file, i);
@@ -45,18 +47,42 @@ RES_ARRAY **test_users_get_users_username() {
 
         end = grocery_string_get_str_first_char_index(certificate, ".password", 0);
 
-        users_username[i - 1] = grocery_string_cutwords(certificate, 0, end - 1);
+        ++count;
+        users_username[count] = grocery_string_cutwords(certificate, 0, end - 1);
     }
 
     system("rm /Users/yimutian/sherk/database/information_schema/user.password/temp_show_users.txt");
 
-    return users_username;
+
+    res_array->array = users_username;
+    res_array->count = count+1;
+
+    return res_array;
 }
 
 // 获取全部用户的密码
-char **test_users_get_users_password() {
+RES_ARRAY *test_users_get_users_password() {
 
+    RES_ARRAY *res_array = (RES_ARRAY *) malloc(sizeof(RES_ARRAY) * 1);
 
+    char **users_password = (char **) malloc(sizeof(char **) * 10);
+
+    RES_ARRAY *users_username = test_users_get_users_username();
+    int i = 0, count = users_username->count;
+    char *file = (char *) malloc(sizeof(char) * 100);
+    for (i = 0; i <= count - 1; ++i) {
+
+        sprintf(file, "/Users/yimutian/sherk/database/information_schema/user.password/%s.password",
+                users_username->array[i]);
+
+        users_password[i] = grocery_string_delete_enter(bookworm_read_x_line(file, 1));
+        // printf("文件名: %s, 文件内容: %s\n", file, bookworm_read_x_line(file, 1));
+    }
+
+    res_array->array = users_password;
+    res_array->count = count;
+
+    return res_array;
 }
 
 void test_users_print_users() {
@@ -71,9 +97,14 @@ void test_users_print_users() {
     printf("| id | name | password | \n");
 
     // 依次打印每个用户
-    char **users = test_users_get_users_username();
-    for(  )
-    printf("| %d  | %s | ******** \n", i, grocery_string_cutwords(certificate, 0, end - 1));
+    RES_ARRAY *users_username = test_users_get_users_username();
+    RES_ARRAY *users_password = test_users_get_users_password();
+    int count = users_username->count;
+    for (i = 0; i <= count - 1; ++i) {
+
+        // printf("| %d  | %s | ******** \n", i + 1, users->array[i]);
+        printf("| %d  | %s | %s \n", i + 1, users_username->array[i], users_password->array[i]);
+    }
 
     printf("--------------------------------------------------\n");
 

@@ -26,7 +26,7 @@ void test_privileges_print_privileges() {
     printf("--------------------------------------------------------------------\n");
 }
 
-
+// 打印当前用户的权限
 void test_privileges_print_grants(){
 
     // 从全局变量 variable_master_session_variables 中获取当前用户名, 并从user表中读取用户的权限信息
