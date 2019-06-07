@@ -301,18 +301,27 @@ void test_table_print_table_part_info(Struct_Table *struct_table_pointer, int fr
 
     // 不判断是否过界, 由调用方判断, 即肯定 from >= 1
     Struct_Field *record_pointer = struct_table_pointer->first_record;
-    while (i < from) {
+    while (i < from && NULL != record_pointer ) {
 
         record_pointer = record_pointer->next_record;
         ++i;
     }
 
     // 打印表数据
-    for (i = from; i <= to; ++i) { // 直接把表头也打印出来
+    int count=0;
+    for (i = from; i <= to && NULL != record_pointer ; ++i) { // 直接把表头也打印出来
 
+        ++count;
         table_painter_print_table_record_info(record_pointer);
         record_pointer = record_pointer->next_record;
     }
+
+    if( 1 > count ){
+
+        grocery_console_print_with_blue_color("| Empty !");
+        grocery_console_print_with_blue_color("---------------------------------------------------\n");
+    }
+
     printf(NONE);
 }
 
