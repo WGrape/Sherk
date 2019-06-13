@@ -1,6 +1,0 @@
-#ifndef SHERKD_LANGUAGE_CONNECTOR_H
-#define SHERKD_LANGUAGE_CONNECTOR_H
-
-
-
-#endif
