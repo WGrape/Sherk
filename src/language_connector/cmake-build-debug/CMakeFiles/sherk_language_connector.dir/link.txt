@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -lconfig -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/sherk_language_connector.dir/language_connector.c.o CMakeFiles/sherk_language_connector.dir/php/php_connector.c.o  -o sherk_language_connector 
