@@ -76,6 +76,12 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 <br>
 
+## 项目目录
+
+```
+src/client, src/cluster, src/language_connector, src/server  这4个目录都是单独的进程
+```
+
 ## ♘ 用途（Introduction）
 本项目致力于对数据库有兴趣的爱好者共同学习和研究
 
