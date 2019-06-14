@@ -193,12 +193,17 @@ src/client, src/cluster, src/language_connector, src/server  这4个目录都是
 
 > * [Mysql数据库日报](https://www.kancloud.cn/taobaomysql/monthly)
 
+> * [Mysql事务回滚的实现](https://www.google.com/search?q=mysql+%E5%9B%9E%E6%BB%9A%E7%9A%84%E5%AE%9E%E7%8E%B0)
 
 > * [MySQL学习之路（八）：MySQL中的数据结构和算法](https://blog.csdn.net/lengyuhong/article/details/5967103)
 
+> * [『浅入深出』MySQL 中事务的实现 ](https://draveness.me/mysql-transaction)
+
+> * [How does MVCC (Multi-Version Concurrency Control) work](https://vladmihalcea.com/how-does-mvcc-multi-version-concurrency-control-work/)
 
 > * [现代存储系统背后的算法](https://infoq.cn/article/algorithms-behind-modern-storage-systems)
 
+> * [ACID中C与CAP定理中C的区别](https://www.jdon.com/46956)
 
 > * [mysql索引背后的数据结构](https://www.google.com/search?q=mysql索引背后的数据结构)
 
