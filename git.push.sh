@@ -1,0 +1,1 @@
+cd ./src/server/; ./git.async.sh
