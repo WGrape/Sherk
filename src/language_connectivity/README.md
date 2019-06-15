@@ -9,5 +9,3 @@ Language Connectivity 会为不同的编程语言提供编写数据库驱动的�
 
 ### PHP连接Sherk
 <img src="../../extra/image/language_connectivity/php_sherk_driver.png">
-
-
