@@ -35,7 +35,7 @@
 Sherk是基于C语言实现的关系型数据库，实现了关系型数据库的基本功能
 
 ## 使用
-1. 下载项目
+1. 创建 ~/sherk/project 文件夹，并在其文件夹内 ```git clone``` 下此项目
 
 2. 执行 ```build/build.sh``` 脚本，如果没有权限可以 ```sudo chmod``` ，或者执行 ```sudo bash ./build.sh``` 。
 
@@ -43,7 +43,7 @@ Sherk是基于C语言实现的关系型数据库，实现了关系型数据库�
 
 4. 如果过程无误会出现客户端交互界面，使用 sherk test 即可完成样例测试。
 
-> 环境要求: Mac + Clion 编译器 + .bash_profile 文件
+> 环境要求: Mac + Clion 编译器 + .bash_profile 文件 + 整个 ~/sherk 目录的可读可写权限
 
 [查看更详细使用说明](docs/usage)
 

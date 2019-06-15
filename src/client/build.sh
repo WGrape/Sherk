@@ -1,6 +1,23 @@
-cd ../../build/client; /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" ${SHERK_PROJECT_PATH}/src/client
+# 这个编译脚本仅用于个人开发使用, 如果非个人开发, 只使用 Sherk/build/build.sh 脚本编译即可 。
 
+# --------------------------
+# 在哪个目录执行这个命令, 在就会哪个目录下生成编译输出的文件
+# /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" .
+# --------------------------
+# | 后来发现无法生成 cmake-build-debug 文件夹，故暂时还是使用 Clion 的 Reload Cmake Project ( 右击CMakeLists.txt文件 )
+# --------------------------
 
 killall sherk # 杀掉所有sherk客户端进程
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build ${SHERK_PROJECT_PATH}/build/client --target sherk -- -j 2
-cp -i ${SHERK_PROJECT_PATH}/build/client/sherk ${SHERK_PROJECT_PATH}/build/bin/
+
+# 执行这个前，请确保此目录下存在 cmake-build-debug 文件夹
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build ./cmake-build-debug --target sherk -- -j 2
+
+# 注意: 源文件和目标文件必须使用自己本地所在的绝对路径, 请自行修改
+# 重要: 开发中的客户端命令从 sherk 变成了 sherk_dev
+ln -sf ~/Lvsi/github/Sherk/src/client/cmake-build-debug/sherk ~/sherk/bin/sherk_dev
+
+
+# 注意:个人开发的时候，如果源码修改了，要及时更新到 ${SHERK_PATH}/project/Sherk 项目下，否则 build 无法生效
+# 删除 ~/sherk/project/Sherk 目录, 拷贝最新 ../../../Sherk 目录到 ~/sherk/project/ 目录下
+rm -r ~/sherk/project/Sherk
+cp -rf ../../../Sherk ~/sherk/project/

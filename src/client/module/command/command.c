@@ -53,6 +53,10 @@ int command_logout_success(int exit_signal) {
     if (EXIT_SIGNAL_NATURAL == exit_signal) {
 
         // 如果是正常退出, 则做清理回收操作
+    } else if (EXIT_SIGNAL_CERTIFICATE_ERROR == exit_signal) {
+
+        // 如果是凭证错误
+        return EXIT_SIGNAL_CERTIFICATE_ERROR;
     } else if (EXIT_SIGNAL_UNKNOWN_COMMAND == exit_signal) {
 
         // 如果是无法识别的命令
