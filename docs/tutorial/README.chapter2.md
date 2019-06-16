@@ -1,18 +1,6 @@
-# 第二章 ⇨ 关系型数据库系统的基础理论
+## 关系型数据库系统的基础理论
 
-- [☝ 回到首页](https://github.com/Lvsi-China/Sherk)
-<!-- - [第一章 ⇨ Sherk 使用手册](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter1.md) -->
-<!-- - [第三章 ⇨ 数据库系统集群的基础理论和架构](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter3.md) -->
-<!-- - [第四章 ⇨ 关系型数据库系统的代码实现（Sherk 源码）](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter4.md) -->
-<!-- - [第五章 ⇨ 思考和总结](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.chapter5.md) -->
-<!-- - [附录](https://github.com/Lvsi-China/Sherk/blob/master/docs/README.appendix.md) -->
-
-<br/>
-
-
-# <span id="article-index">索引</span>
-
-## 1. 前言
+### 1. 前言
 - [1.1 图解数据库](#article-1.1)
 
 - [1.2 数据库的发展历史](#article-1.2)
@@ -24,7 +12,7 @@
     - [1.3.3 数据库管理系统](#article-1.3.3)
     - [1.3.4 数据库系统](#article-1.3.4)
 
-## 2. 深入理解数据库系统
+### 2. 深入理解数据库系统
 
 - 2.1 数据模型的概念
 
@@ -74,14 +62,14 @@
     - [2.5.2 非关系型数据库（NoSQL）](#article-2.5.2)
 
 
-## 3. <span id="article-chapter-3">非关系型数据库系统简介</span>
+### 3. <span id="article-chapter-3">非关系型数据库系统简介</span>
 
 - [3.1 概述](#article-3.1)
 - [3.2 非关系型数据库的特点](#article-3.2)
 - [3.3 常用的非关系型数据库](#article-3.3)
 - [3.4 更多内容](#article-3.4)
 
-## 4. <span id="article-chapter-4">深入理解关系型数据库系统</span>
+### 4. <span id="article-chapter-4">深入理解关系型数据库系统</span>
 
 - 4.1 关系的基础概念
 
@@ -167,7 +155,7 @@
 
 
 
-## 5. 关系型数据库系统的理论架构
+### 5. 关系型数据库系统的理论架构
 
 - #### 5.1 完整性
 
@@ -319,14 +307,9 @@
 - #### 杂项
 
     - ##### 1. [存储过程](#miscellaneous-1)
-<br/>
 
-
-↑ 索引结束 &nbsp; | &nbsp;[♙回到索引](#article-index)  &nbsp;|&nbsp; 正文开始 ↓
 
 ---
-
-<br/>
 
 # 正文
 

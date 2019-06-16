@@ -35,9 +35,9 @@
 Sherk是基于C语言实现的关系型数据库，实现了关系型数据库的基本功能
 
 ## 使用
-1. 创建 ~/sherk/project 文件夹，并在其文件夹内 ```git clone``` 下此项目
+1. 本地创建 ```~/sherk/project``` 文件夹，并在此文件夹内 ```git clone``` 下本项目
 
-2. 执行 ```build/build.sh``` 脚本，如果没有权限可以 ```sudo chmod``` ，或者执行 ```sudo bash ./build.sh``` 。
+2. 执行本项目下的 ```build/build.sh``` 脚本，如果没有权限可以 ```sudo chmod``` ，或者执行 ```sudo bash ./build.sh``` 。
 
 3. 使用 ```sherkd``` 命令启动数据库服务端, 再使用 ```sherk login``` 启动客户端（初始账号:root, 初始密码:000000）。
 
