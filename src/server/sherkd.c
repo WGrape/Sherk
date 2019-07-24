@@ -8,6 +8,7 @@
 #include <SherkService/test/module/test_sql/test_sql.h>
 #include <SherkSQL/src/module/extractor/extractor.h>
 #include <SherkSQL/src/module/builder/builder.h>
+#include <SherkService/mechanism/module/excel_graph/excel_graph.h>
 
 
 int main() {

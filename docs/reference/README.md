@@ -2,13 +2,29 @@
 
 #### 推荐
 
+- [推荐: SQL Abstract Syntax Trees Vocabulary](http://ns.inria.fr/ast/sql/index.html#TransactionManagementStatement)
+- [推荐: Mysql官方文档 Chapter 9 Language Structure](https://dev.mysql.com/doc/refman/5.7/en/language-structure.html)
+
+- [推荐: Mysql中文文档](http://www.searchdoc.cn/rdbms/mysql/dev.mysql.com/doc/refman/5.7/en/expressions.com.coder114.cn.html)
+
+- [推荐: Mysql中文文档2](https://www.mysqlzh.com/doc/87.html)
+
 - [推荐:『浅入浅出』MySQL 和 InnoDB](https://draveness.me/mysql-innodb)
 - [推荐: 国外讲解数据库技术的实现原理](http://www.mathcs.emory.edu/~cheung/Courses/377/Syllabus/10-Transactions/)
+- [推荐: 国外DBA Diaries](http://dbadiaries.com/)
+- [推荐: SQL 生成 AST](https://github.com/alibaba/druid/tree/master/src/main/java/com/alibaba/druid/sql/parser)
+- [推荐: 学习 AST A PHP parser written in PHP](https://github.com/nikic/PHP-Parser)
+- [推荐: 学习前端 AST](http://resources.jointjs.com/demos/javascript-ast)
+- [推荐: Swoole Lock 部分源码](https://github.com/swoole/swoole-src/tree/master/src/lock)
+- [推荐: 学习Linux内核源码](https://github.com/Lvsi-China/NarniaOS)
+- [推荐: Swoole 源码分析——锁与信号模块](https://learnku.com/articles/15389/swoole-source-code-analysis-lock-and-signal-module)
 
+- [推荐: node-sql-parser](https://www.npmjs.com/package/node-sql-parser)
+
+- [推荐: Ruby pg_query - SQL Parsing](https://github.com/lfittl/pg_query)
 
 #### 阅读
 
-* [维基百科](https://www.wikipedia.org/)
 * [并发控制](https://zh.wikipedia.org/wiki/Category:%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6)
 * [数据库集群](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E7%BE%A4)
 * [sql优化专栏](https://dbaplus.cn/news-155-1.html)

@@ -10,6 +10,7 @@
 #include <SherkSupport/src/module/maintainer/table_in_disk_maintainer/table_in_disk_maintainer.h>
 #include <SherkService/mechanism/module/variable_master/variable_master.h>
 #include <SherkService/mechanism/include/define/color.h>
+#include <SherkService/mechanism/module/excel_graph/excel_graph.h>
 
 extern Variable_Master_Session_Variables variable_master_session_variables;
 
@@ -24,6 +25,8 @@ void test_table_print_tables(char *database_name) {
     char szTest[1000] = {0};
 
     int count = 0;
+
+    FILE *fpp = excel_graph_create_file("./.excel_graph.txt");
 
     while (!feof(fp)) {
         memset(szTest, 0, sizeof(szTest));
@@ -45,10 +48,20 @@ void test_table_print_tables(char *database_name) {
         // printf("-----------right:%d-----------",right);
 
         right = right - 1;
-        printf("\n| %s", grocery_string_cutwords(szTest, 0, right));
+        char *table_name = grocery_string_cutwords(szTest, 0, right);
+        printf("\n| %s", table_name);
+
+
+        excel_graph_draw_box_top(fpp, 10);
+        excel_graph_draw_enter(fpp);
+        excel_graph_draw_box_aside(fpp, table_name, 10, (int)strlen(table_name));
+        excel_graph_draw_enter(fpp);
+        excel_graph_draw_box_bottom(fpp, 10);
+
         ++count;
     }
     fclose(fp);
+    fclose(fpp);
 
     table_in_disk_maintainer_show_tables(database_name, 1);
 
