@@ -1,0 +1,2 @@
+ALTER TABLE school.users ADD COLUMN `signature` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '签名' AFTER `name`;
+
