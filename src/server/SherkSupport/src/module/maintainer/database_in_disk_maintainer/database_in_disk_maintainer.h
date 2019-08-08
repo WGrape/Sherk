@@ -1,0 +1,10 @@
+#ifndef SERVER_SHERK_SUPPORT_MODULE_MAINTAINER_DATABASE_IN_DISK_MAINTAINER_H
+#define SERVER_SHERK_SUPPORT_MODULE_MAINTAINER_DATABASE_IN_DISK_MAINTAINER_H
+
+extern FILE* database_in_disk_maintainer_show_databases(int delete);
+
+extern void database_in_disk_maintainer_create_database(char *database_name, int infoschema_callback);
+
+extern void database_in_disk_maintainer_drop_database(char *database_name, int infoschema_callback);
+
+#endif
