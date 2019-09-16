@@ -20,7 +20,7 @@
 - [推荐: Swoole 源码分析——锁与信号模块](https://learnku.com/articles/15389/swoole-source-code-analysis-lock-and-signal-module)
 
 - [推荐: node-sql-parser](https://www.npmjs.com/package/node-sql-parser)
-
+- [MySQL 是怎样运行的：从根儿上理解 MySQL](https://juejin.im/book/5bffcbc9f265da614b11b731)
 - [推荐: Ruby pg_query - SQL Parsing](https://github.com/lfittl/pg_query)
 
 #### 阅读
